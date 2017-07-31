@@ -1,0 +1,236 @@
+
+<style type="text/css">
+    .custo-select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-repeat: no-repeat;
+        border: 1px solid #cccccc;
+        color: #7d6666;
+        background-image: url('../../../assets/images/sec_icon.png');
+        font-size: 14px;
+        height: 33px;
+        padding-left: 31px;
+        width: 100%;
+    }
+
+    select.custo-select::-ms-expand {
+        display: none;
+    }
+
+    .viewbtn {
+        border: 1px solid #CCC;
+        padding: 8px 12px;
+        color: #444;
+    }
+
+        .viewbtn.viewbtn0 {
+            background-color: #72BB53;
+            color: #FFF;
+            border: none;
+        }
+         #tableservice_length select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 9px;
+    padding: 6px;
+}
+          .input-new {
+    border: 1px solid #ddd !important;
+    padding: 9px!important;
+}
+            .dataTables_wrapper .top {
+    padding: 0;
+}
+   .background-image-centernew {
+    background-image: url("../../../assets/images/express_writer.png");
+    background-position:center;
+    background-repeat:no-repeat;
+    padding: 118px;
+    text-align: center;
+}
+   .table-title {
+    font-size: 30px !important;
+    font-weight: 500;
+    text-align: center;
+}
+</style>
+<div id="simple-table" class="page-layout simple fullwidth doc-page element-doc-page">   
+    <!-- CONTENT -->
+    <div class="content">
+        <div class="form-wrapper md-whiteframe-1dp whiteframe01 background-image-centernew" flex="100">
+            <div class="inner-div">
+                <form name="basicForm" class="md-inline-form" novalidate>
+                    <div class="form-title" style="text-align:center!important;font-size: 40px;font-weight: 800;">Now Hiring Awesome People</div>
+
+                    <div style="text-align:center!important;">
+                        <p style="text-align:center!important;">Think you've got what it takes? </p>
+                    </div>
+
+                   
+                </form>
+            </div>
+        </div>
+        <div class="simple-table-container md-whiteframe-4dp">
+            
+            <div class="table-title">
+                Job Listings
+            </div>
+            <div>
+                <div class="layout-row">
+                    <div class="form-wrapper"> 
+                        <md-input-container flex>
+                            <label>Select Jobs</label>
+                            <md-select ng-model="selectedjob">
+                                <md-option ng-repeat="job in vm.jobsrole" value="{{job.name}}">
+                                    {{job.name}}
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                    </div>
+                    <div class="flex-30 form-wrapper">
+                        <md-input-container flex>
+                            <label>Select Availibility</label>
+                            <md-select ng-model="selectedAval">
+                                <md-option ng-repeat="item in vm.availibility" value="{{item.description}}">
+                                    {{item.description}}
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                        </div>
+                    </div>
+            </div>
+           
+                <!-- / WIDGET 7 -->
+            <div class="widget-group" layout="row" flex="100" layout-wrap>
+                <!-- WIDGET 7 -->
+                <ms-widget flippable="false" layout="row" flex="100" flex-gt-md="100">
+                    <!-- Front -->
+                    <ms-widget-front class="white-bg">
+                        <div class="ph-16 pv-24 border-bottom" layout="row" layout-align="space-between center">
+                            <div layout="row" layout-align="start center" style="margin-left: -8px;">
+                                <!--<span class="h3">{{vm.widget7.title}}</span>-->
+                                <span class="ml-16 text-boxed pink-bg white-fg" >{{vm.filteredTodos.length}} jobs</span>
+                            </div>
+                            <div class="refresh_col">
+                                <md-menu>
+                                    <md-button aria-label="more" class="md-icon-button"
+                                               ng-click="$mdOpenMenu($event)">
+                                        <md-icon md-font-icon="icon-dots-vertical"></md-icon>
+                                    </md-button>
+                                    <md-menu-content width="2">
+                                        <md-menu-item>
+                                            <md-button ng-click="refreshWidget()" aria-label="Refresh widget">
+                                                <i class="icon icon-refresh"></i>
+                                            </md-button>
+                                        </md-menu-item>
+                                    </md-menu-content>
+                                </md-menu>
+                                <input type="text" ng-model="search" placeholder="Search" class="input-new" />
+                            </div>
+                        </div>
+                        <table class="dataTable row-border hover" datatable="ng"
+                               dt-options="vm.widget7.dtOptions" >
+                            <thead>
+                                <tr>
+                                    <th class="secondary-text">
+                                        <div class="table-header">
+                                            <span class="column-title ng-binding">Title</span>
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text">
+                                        <div class="table-header">
+                                            <span class="column-title">Compensation</span>
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text">
+                                        <div class="table-header">
+                                            <span class="column-title">Availibility</span>
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text">
+                                        <div class="table-header">
+                                            <span class="column-title">Role</span>
+                                        </div>
+                                    </th>
+                                    
+                                    <th class="secondary-text">
+                                        <div class="table-header">
+                                            <span class="column-title">Created Date</span>
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text">
+                                        <div class="table-header">
+                                            <span class="column-title">Status</span>
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text">
+                                        <div class="table-header">
+                                            <span class="column-title"></span>
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text">
+                                        <div class="table-header">
+                                            <span class="column-title"></span>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="row in vm.filteredTodos |filter:selectedjob |filter:selectedAval |filter :search">
+                                    <td class="sorting_1">
+                                        <span class="bold" style="font-weight:bold;">
+                                            {{row.jobname}}
+                                        </span>
+                                    </td>
+                                    <td class="sorting_1">
+                                        <span class="{{row.mincompensation}}">
+                                            {{row.mincompensation}}$ -
+                                        </span>
+                                        <span class="{{row.maxcompensation}}">
+                                            {{row.maxcompensation}}$
+                                        </span>
+                                    </td>
+                                    <td class="sorting_1">
+                                        <span class="{{row.availibility}}">
+                                            {{row.availibility}}
+                                        </span>
+                                    </td>
+                                    <td class="sorting_1">
+                                        <span class="{{row.role}}">
+                                            {{row.role}}
+                                        </span>
+                                    </td>
+                                    <td class="sorting_1">
+                                        <span class="amber-700-fg">
+                                            {{row.createddate | date}}
+                                        </span>
+                                    </td>
+                                    <td class="sorting_1">
+                                        <span class="red-fg">
+                                            {{row.status}}
+                                        </span>
+                                    </td>
+                                    <td class="sorting_1">
+                                        <button class="md-raised md-button md-default-theme md-ink-ripple" ng-click="view(row._id)">VIEW</button>
+                                        <div class="md-ripple-container"></div>
+                                    </td>
+                                    <td class="sorting_1">
+                                        <button class="md-raised md-warn md-button md-default-theme md-ink-ripple"   ng-click="apply(row._id,row.testid,row.jobname)" style="margin-left:10px; ">APPLY NOW</button>
+                                        <div class="md-ripple-container"></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </ms-widget-front>
+                    <!-- / Front -->
+                </ms-widget>
+                <!-- / WIDGET 7 -->                
+            </div>
+            </div>
+    </div>
+        </div>
+    <!-- / CONTENT -->
+   
+    
+    

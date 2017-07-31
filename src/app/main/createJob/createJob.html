@@ -1,0 +1,213 @@
+
+<style>
+    .md-raised.md-accent.md-button.md-default-theme.md-ink-ripple {
+    height: 37px;
+    margin-top: 20px;
+}
+
+    md-input-container.md-icon-float > label {
+        font-size: 24px;
+    }
+
+    
+    .cancel_button{box-shadow:0 2px 5px 0 #CCC!important;color:#666!important;background-color:#FFF!important;}
+    .draft_button {
+        box-shadow: 0 2px 5px 0 #ddd !important;
+        color: red !important;
+        background-color:#FFF!important;
+    }
+    .md-input.ng-not-empty.ng-dirty.ng-valid-parse.ng-valid.ng-valid-required.ng-touched {
+  font-size: 20px;
+}
+
+
+    .content .form-title.form-title00 {
+  font-size: 19px;
+  margin-bottom: 10px;
+  font-weight: 500 !important;
+} 
+    .form-wrapper {
+    background: #ffffff none repeat scroll 0 0;
+    padding: 37px 16px 16px;
+}
+    md-icon[md-font-icon], i {
+    font-size: 15px;
+    height: 19px;
+    line-height: 19px;
+    min-height: 19px;
+    min-width: inherit;
+    width: auto;
+}
+     .md-button.md-fab {
+    height: 25px;
+    min-height: 25px;
+    text-align: center;
+    width: 25px;
+}
+     .uploadicon.ng-scope {
+    padding-top: 28px;
+}
+</style>
+ 
+
+<div id="simple-table" class="page-layout simple fullwidth doc-page element-doc-page">
+    <!-- CONTENT -->
+    <div class="content">
+
+        <div class="row">
+            <div class="md-title pb-0 mb-15">New Job</div>
+            <div class="form-wrapper md-whiteframe-1dp md-whiteframe08" flex="100">
+                <form name="basicForm" class="md-inline-form" novalidate>                  
+
+                
+                    <div layout="column" layout-gt-sm="row" class="whiteframe08p" style="padding:33px 15px 10px 15px;">
+                        <md-input-container flex="50">
+                            <input type="text" name="jobtitle" ng-model="vm.basicForm.Jobtitle"
+                                   placeholder="Job Title"
+                                   required>
+                            <div ng-messages="basicForm.jobtitle.$error"
+                                 role="alert">
+                                <div ng-message="required">
+                                    <span>Job title is required.</span>
+                                </div>
+                            </div>
+                        </md-input-container>
+                    </div>
+                    <div layout="column" layout-gt-sm="row" class="whiteframe08p">
+                        <md-input-container class="md-block" flex="70">
+                            <label>Job Description</label>
+                            <textarea ng-model="vm.basicForm.Description" md-maxlength="500" name="Description" max-rows="5" required></textarea>
+                            <div ng-messages="basicForm.Description.$error"
+                                 role="alert">
+                                <div ng-message="required">
+                                    <span>Job Description is required.</span>
+                                </div>
+                            </div>
+                        </md-input-container>
+                        <div id="file-uploader"
+                             flow-init="vm.ngFlowOptions"
+                             flow-name="vm.ngFlow.flow"
+                             flow-files-submitted="vm.upload()"
+                             flow-file-added="vm.fileAdded($file)"
+                             flow-file-success="vm.fileSuccess($file, $message)"
+                             flow-complete="vm.uploadComplete()" class="uploadicon">
+                            <md-button flow-btn class="add-file-button md-fab md-warn"
+                                       aria-label="Add file" translate
+                                       translate-attr-aria-label="FM.ADD_FILE">
+                                <md-icon md-font-icon="icon-plus"></md-icon> 
+                            </md-button> Attach
+                        </div>
+                        </div>
+                        <div layout="column" layout-gt-xs="row" class="whiteframe08p">
+                            <md-input-container flex>
+                                <label>Job Roles</label>
+                                <md-select ng-model="vm.basicForm.jobsrole" required>
+                                    <md-option ng-repeat="job in vm.jobsrole" value="{{job.name}}">
+                                        {{job.name}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                            <md-input-container flex>
+                                <label>Availability</label>
+                                <md-select ng-model="vm.basicForm.availibility" required>
+                                    <md-option ng-repeat="aval in vm.availibility" value="{{aval.description}}">
+                                        {{aval.description}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                            <md-input-container flex>
+                                <label>Per</label>
+                                <md-select ng-model="vm.basicForm.Compensation" required>
+                                    <!--<md-option ng-repeat="state in vm.states" value="{{state.abbrev}}">
+                        {{state.abbrev}}
+                    </md-option>-->
+                                    <md-option value="Word" ng-click="change('Word')">Word</md-option>
+                                    <md-option value="Hour" ng-click="change('Hour')">Hour</md-option>
+                                </md-select>
+                            </md-input-container>
+                            <md-input-container flex>
+                                <label>Min Compensation</label>
+                                <md-select ng-model="vm.basicForm.min" required>
+                                    <md-option ng-repeat="state in vm.minmax" value="{{state}}">
+                                        {{state}} {{vm.dolcent}}
+
+                                    </md-option>
+
+                                </md-select>
+                            </md-input-container>
+                            <md-input-container flex>
+                                <label>Max Compensation</label>
+                                <md-select ng-model="vm.basicForm.max" required>
+                                    <md-option ng-repeat="state in vm.minmax" value="{{state}}">
+                                        {{state}} {{vm.dolcent}}
+                                    </md-option>
+
+                                </md-select>
+                            </md-input-container>
+
+
+
+
+                            <md-input-container flex>
+                                <label>Expires on</label>
+                                <md-datepicker ng-model="myDate" md-placeholder="Expires on" required>
+
+                                </md-datepicker>
+                            </md-input-container>
+
+                        </div>
+
+                        <div layout="column" class="bottom_attach_col" layout-gt-xs="row">
+                            <md-input-container flex>
+                                <label>Attach Test</label>
+                                <md-select ng-model="vm.basicForm.test" required>
+                                    <md-option ng-repeat="test in vm.tests" value="{{test._id}}">
+                                        {{test.testname}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+
+                            <div class="pull-right">
+                                <md-button class="md-raised md-accent cancel_button" aria-label="Cancel"
+                                           ng-click="cancel()">
+                                    Cancel
+                                </md-button>
+                                <md-button class="md-raised md-accent draft_button" aria-label="Draft"
+                                           ng-disabled="basicForm.$invalid || basicForm.$pristine" ng-click="Draftjob()">
+                                    Draft
+                                </md-button>
+                                <md-button type="submit" class="md-raised md-accent" aria-label="Submit"
+                                           ng-disabled="basicForm.$invalid || basicForm.$pristine" ng-click="publishjob()">
+                                    Publish Job
+                                </md-button>
+                            </div> 
+                        </div>
+
+
+
+
+
+</form>
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <!-- / CONTENT -->
+
+    <script>
+    // $('a[href$="/Tests"]').addClass("active md-accent-bg");
+    $( document ).ready(function() {
+        $('.ms-navigation-item').find('a').each(function () {
+
+            if ($(this).attr('href') == '/Jobs') {
+                $(this).addClass("active md-accent-bg");
+            }
+        });
+    });
+
+    </script>
+
+</div>

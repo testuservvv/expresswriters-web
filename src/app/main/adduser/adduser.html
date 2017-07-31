@@ -1,0 +1,1583 @@
+
+<style>
+
+            .md-raised.md-accent.md-button.md-default-theme.md-ink-ripple {
+                height: 37px;
+                margin-top: 20px;
+            }
+
+            .green {
+                color: green;
+            }
+
+            .content .form-wrapper .form-title {
+                background: #fff none repeat scroll 0 0;
+                border: 1px solid #dfdfdf;
+                font-size: 21px;
+                padding: 8px 14px;
+            }
+
+            .form-wrapper {
+                background: #fcfcfc none repeat scroll 0 0;
+                padding: 0;
+                box-shadow: none;
+            }
+
+            .md-inline-form.ng-pristine.ng-invalid.ng-invalid-required {
+                background: #fff none repeat scroll 0 0;
+                border: 1px solid #ccc;
+                margin: 13px 20px;
+                padding: 16px;
+            }
+
+            .md-inline-form.ng-pristine.ng-invalid.ng-invalid-required {
+                padding: 16px 8px;
+            }
+
+
+            .icon.s20 {
+                position: absolute;
+                right: 0;
+                top: 8px;
+            }
+
+            .ng-pristine.md-input.ng-empty.ng-invalid.ng-invalid-required.ng-touched {
+                position: relative;
+            }
+
+            .md-icon-float.md-default-theme.flex-50.md-input-invalid {
+                margin-left: 10px;
+            }
+
+            .md-inline-form.ng-dirty.ng-valid-parse.ng-valid.ng-valid-required {
+                padding: 16px;
+            }
+
+            .md-inline-form.ng-dirty.ng-valid-parse.ng-valid.ng-valid-required {
+                padding: 16px;
+            }
+
+            .md-inline-form {
+                background: #fff none repeat scroll 0 0;
+                border: 1px solid #ccc;
+            }
+
+            .md-icon-float.md-default-theme.flex-50 {
+                margin-left: 15px;
+            }
+
+            .form-wrapper.md-whiteframe-1dp.capacity.flex-100 {
+                float: left;
+                width: 100%;
+                height: auto;
+            }
+            .pull-right {
+            float:right;}
+
+            .capacity .form-title {
+                position: relative;
+            }
+
+            .content .form-wrapper .form-title {
+                font-size: 21px;
+            }
+
+            .left-action {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+                .left-action span {
+                font-size:12px;}
+                .left-action > ul {
+          width: 100%;
+          margin: 0px;
+          padding: 0px;
+          list-style-type: none;
+        }
+                .md-secondary.ng-pristine.ng-untouched.ng-valid.md-default-theme.ng-empty {
+          margin: 0;
+          padding: 0;
+        }
+        .left-action span {
+          display: inline-block;
+          height: 37px;
+          width: 65px;
+        }
+                .left-action {
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 21%;
+        }
+        .md-secondary.ng-valid.md-default-theme.ng-dirty.ng-valid-parse.ng-empty.ng-touched {
+          margin: 0;
+        }
+
+
+        .action_right {
+            display: inline-block;
+            float: right;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            right: 17px;
+            top: 13px;
+            width: 210px;
+        }
+        .action_right > li {
+            float: left;
+            font-size: 12px;
+            list-style: outside none none;
+            width: auto;
+        }
+        .action_right > li .icon-calendar-clock {
+            float: left;
+            font-size: 15px;
+        }
+
+        .action_right > li {
+            font-size: 12px;
+            list-style: outside none none;
+        }
+        .action_right > li:last-child {
+            float: right;
+        }
+
+        .action_right > li .md-secondary {
+            display: inline;
+            float: left;
+            margin: -4px 0 0 !important;
+        }
+            .new-heading {
+            border:none;}
+        .new-capacity {
+          background: #fff none repeat scroll 0 0;
+          border: 1px solid #ccc;
+          padding: 18px !important;
+        }
+            .new-capacity .form-title {
+            border:none;}
+            .form-title.new-heading {
+          border: medium none !important;
+        }
+            .action-footer {
+          margin-top: 43px;
+          padding-bottom: 2px;
+        }
+            .no-margin {
+            margin:0px;}
+
+            .add_user_col {
+          border: 1px solid #ccc;
+          margin-top: 10px;
+        }
+
+            .add_user_col .form-title {
+          border: medium none !important;
+          font-size: 18px !important;
+          padding: 0 !important;
+        }
+
+            .md-inline-form .form-title {
+            padding-left: 14px !important;
+            padding-top: 10px !important;
+        }
+        .lock_col{position:relative;bottom:7px;}
+
+        .ms-responsive-table-wrapper {
+            margin-left: -18px;
+            margin-right: -18px;
+        }
+        .ph-16.pv-24.border-bottom {border-bottom:none!important}
+        .add_user_col {
+          border: 1px solid #ccc;
+          display: inline-block;
+          margin-top: 10px;
+          padding-bottom: 11px;
+          width: 100%;
+        }
+        .md-chips md-chip .md-chip-remove md-icon {
+        font-size: 0 !important;
+        height: 9px;
+        left: 55%;
+        position: absolute;
+        top: 12px !important;
+        transform: translate3d(-50%, -50%, 0px);
+        width: 18px;
+    }
+        md-chip .md-chip-remove md-icon svg {
+        width: 14px;
+        height: 16px;
+        max-width: 18px;
+        max-height: 18px;
+        margin: 4px 9px;
+    }
+</style>
+
+
+<div id="simple-table" class="page-layout simple fullwidth doc-page element-doc-page">
+    <!-- CONTENT -->
+    <div class="content">
+
+        <div class="row">
+            <div class="form-title  form-title02">Add User</div>
+
+            <div class="form-wrapper md-whiteframe-1dp add_user_col" flex="100">
+
+
+
+                <div class="form-wrapper md-whiteframe-1dp" flex="100" style="margin:18px 17px 0;">
+                    <form name="rolesform" class="md-inline-form" novalidate style="margin:0px;">
+                        <div name="roles" layout="column" layout-gt-xs="row" flex="20">
+                            <md-input-container flex="20">
+                                <label>Select Role</label>
+                                <md-select ng-model="vm.jobsrole" required>
+                                    <md-option ng-click="vm.getpayout(job.Role)" ng-repeat="job in vm.jobsroles" value="{{job.Role}}"
+                                               ng-hide="job.Role=='Applicant'">
+                                        {{job.Role}}
+                                    </md-option>
+                                </md-select>
+                                <div ng-messages="rolesform.roles.$error"
+                                     role="alert">
+                                    <div ng-message="required">
+                                        <span>Please select a role for user.</span>
+                                    </div>
+                                </div>
+                            </md-input-container>
+
+
+                        </div>
+                    </form>
+                </div>
+                <div class="form-wrapper md-whiteframe-1dp" flex="100" style="margin:18px 17px 0;" ng-if="vm.jobsrole=='Custom'">
+                    <form name="Content" class="md-inline-form" novalidate style="margin:0px;">
+                        <div name="roles" layout="column" layout-gt-xs="row" flex="20">
+                            <md-input-container flex="20">
+                                <label>Type</label>
+                                <md-select ng-model="vm.customselect" required>
+                                    <md-option value="Content Strategist">
+                                        Content Strategist
+                                    </md-option>
+                                    <md-option value="Content Strategist1">
+                                        Content Strategist1
+                                    </md-option>
+                                    <md-option value="Content Strategist2">
+                                        Content Strategist2
+                                    </md-option>
+                                    <md-option value="Content Strategist3">
+                                        Content Strategist3
+                                    </md-option>
+                                </md-select>
+                                <div ng-messages="Content.customselect.$error"
+                                     role="alert">
+                                    <div ng-message="required">
+                                        <span>Please select a Type for user.</span>
+                                    </div>
+                                </div>
+                            </md-input-container>
+
+
+                        </div>
+                    </form>
+                </div>
+
+                <div class="md-title mt-32"></div>
+
+                <div layout="row" style="padding:16px;">
+                    <!-- BASIC FORM -->
+                    <div class="form-wrapper md-whiteframe-1dp " flex="50" style="margin-right:10px">
+                        <form name="basicForm" class="md-inline-form no-margin" novalidate style="padding:16px 8px;">
+                            <div class="form-title">Basic Info</div>
+                            <div layout="column" layout-gt-sm="row">
+                                <md-input-container flex>
+                                    <input type="text" name="firstname" ng-model="vm.firstname"
+                                           placeholder="Firstname"
+                                           required>
+                                    <div ng-messages="basicForm.firstname.$error"
+                                         role="alert">
+                                        <div ng-message="required">
+                                            <span>Firstname field is required.</span>
+                                        </div>
+                                    </div>
+                                </md-input-container>
+                                <md-input-container flex>
+                                    <input type="text" name="lastname" ng-model="vm.lastname" placeholder="Lastname"
+                                           required>
+                                    <div ng-messages="basicForm.lastname.$error"
+                                         role="alert">
+                                        <div ng-message="required">
+                                            <span>Lastname field is required.</span>
+                                        </div>
+                                    </div>
+                                </md-input-container>
+                            </div>
+                            <div layout="column" layout-gt-xs="row">
+                                <md-input-container flex>
+                                    <input type="email" name="email" ng-model="vm.email"
+                                           placeholder="Primary Email" ng-pattern="/^.+@.+\..+$/"
+                                           required>
+                                    <div ng-messages="basicForm.email.$error"
+                                         role="alert">
+                                        <div ng-message="required">
+                                            <span>Email is required.</span>
+                                        </div>
+                                        <div ng-message="pattern">
+                                            <span>Email must be a valid e-mail address</span>
+                                        </div>
+                                    </div>
+                                </md-input-container>
+                                <md-input-container flex>
+                                    <input type="email" name="paymentemail" ng-model="vm.paymentemail"
+                                           placeholder="Payment Email" ng-pattern="/^.+@.+\..+$/"
+                                           required>
+                                    <div ng-messages="basicForm.paymentemail.$error"
+                                         role="alert">
+                                        <div ng-message="required">
+                                            <span>Payment Email is required.</span>
+                                        </div>
+                                        <div ng-message="pattern">
+                                            <span>Payment Email must be a valid e-mail address</span>
+                                        </div>
+                                    </div>
+                                </md-input-container>
+
+
+                            </div>
+                            <md-input-container flex="50">
+                                <label>Phone</label>
+                                <input name="Phone" ng-model="vm.Phone" placeholder="Phone number"
+                                       ng-pattern="/^[0-9]{10}$/" md-maxlength="10">
+                                <div ng-messages="basicForm.Phone.$error"
+                                     role="alert" multiple>
+
+                                    <div ng-message="pattern">
+                                        <span>That doesn't look like a valid Phone number.</span>
+                                    </div>
+                                    <div ng-message="md-maxlength">
+                                        <span>Postal code can't be longer than 10 digit.</span>
+                                    </div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container flex="50">
+                                <label>ext.</label>
+                                <input name="ext" ng-model="vm.ext" placeholder="ext."
+                                       ng-pattern="/^[0-9]{10}$/" md-maxlength="10">
+                                <div ng-messages="basicForm.ext.$error"
+                                     role="alert" multiple>
+
+                                    <div ng-message="pattern">
+                                        <span>That doesn't look like a valid Phone number.</span>
+                                    </div>
+                                    <div ng-message="md-maxlength">
+                                        <span>Postal code can't be longer than 10 digit.</span>
+                                    </div>
+                                </div>
+                            </md-input-container>
+
+
+                        </form>
+                    </div>
+                    <!-- / BASIC FORM -->
+                    <!-- BASIC FORM DATA -->
+                    <div class="form-wrapper md-whiteframe-1dp" flex="50" style="margin-left:10px">
+                        <form name="basicFormaddress" class="md-inline-form  no-margin" novalidate style="padding:16px 8px;">
+                            <div class="form-title">Address</div>
+                            <div layout="column" layout-gt-sm="row">
+                                <md-input-container flex>
+                                    <input type="text" name="StreetAddress *" ng-model="vm.StreetAddress"
+                                           placeholder="Street Address">
+                                    <!--<div ng-messages="basicFormaddress.StreetAddress.$error"
+                                         role="alert">
+                                        <div ng-message="required">
+                                            <span>Street Address field is required.</span>
+                                        </div>
+                                    </div>-->
+                                </md-input-container>
+
+                            </div>
+                            <div layout="column" layout-gt-xs="row">
+                                <md-input-container flex>
+                                    <input type="text" name="City" ng-model="vm.City"
+                                           placeholder="City">
+                                    <!--<div ng-messages="basicFormaddress.City.$error"
+                                         role="alert">
+                                        <div ng-message="required">
+                                            <span>City is required.</span>
+                                        </div>
+
+                                    </div>-->
+                                </md-input-container>
+                                <md-input-container flex>
+                                    <input type="text" name="StateRegion" ng-model="vm.StateRegion"
+                                           placeholder="State/Region">
+                                    <!--<div ng-messages="basicFormaddress.StateRegion.$error"
+                                         role="alert">
+                                        <div ng-message="required">
+                                            <span>StateRegion is required.</span>
+                                        </div>
+
+                                    </div>-->
+                                </md-input-container>
+
+
+                            </div>
+                            <md-input-container flex class="w49p">
+                                <label>Country</label>
+                                <input name="Country" ng-model="vm.Country" placeholder="Country">
+                                <!--<div ng-messages="basicFormaddress.Country.$error"
+                                     role="alert" multiple>
+                                    <div ng-message="required"><span>Country is required.</span></div>
+
+                                </div>-->
+                            </md-input-container>
+                            <md-input-container flex class="w49p">
+                                <label>Postal Code</label>
+                                <input name="postalcode" ng-model="vm.postalCode" placeholder="12345"
+                                       ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
+                                <div ng-messages="basicFormaddress.postalcode.$error"
+                                     role="alert" multiple>
+                                    <!--<div ng-message="required"><span>You must supply a postal code.</span></div>-->
+                                    <div ng-message="pattern">
+                                        <span>That doesn't look like a valid postal code.</span>
+                                    </div>
+                                    <div ng-message="md-maxlength">
+                                        <span>Postal code can't be longer than 5 characters.</span>
+                                    </div>
+                                </div>
+                            </md-input-container>
+
+
+                        </form>
+                    </div>
+                    <!-- / BASIC FORM DATA -->
+
+                </div>
+                <div class="form-wrapper md-whiteframe-1dp" flex="100" style="padding: 16px;">
+                    <form name="taxform" class="md-inline-form" novalidate>
+                        <div class="form-title">Tax Info</div>
+                        <!--<input type="{{vm.typeoftax}}" name="EINSSN" ng-model="vm.EINSSN" placeholder="EIN or SSN"/>
+                        <i class="icon {{vm.lck}} s20" style="color:green;"></i>-->
+                        <md-input-container flex="50">
+                            <input class="pr25" type="{{vm.typeoftax}}" name="EINSSN" ng-model="vm.EINSSN"
+                                   placeholder="EIN or SSN">
+                            <i class="icon {{vm.lck}} s20" style="color:green;"></i>
+                        </md-input-container>
+                        <span class="lock_col" ng-click="hideshowtype()" style="cursor:pointer;">{{vm.hdnshwtxt}}</span>
+                    </form>
+                </div>
+                <div class="md-title mt-32"></div>
+
+                <!--Writer view-->
+                <div class="form-wrapper md-whiteframe-1dp capacity new-capacity" style="padding:0px 16px; margin:0px 16px;" ng-if="vm.jobsrole=='Writer'">
+                    <div class="form-title new-heading">
+                        Capacity & Availability
+
+
+                        <ul class="action_right">
+                            <li><i class="icon-calendar-clock"></i> <span class="{{unav}}">  Unavailable</span></li>
+                            <li>
+                                <md-switch class="md-secondary" ng-click="toggle(vm.answer)" ng-model="vm.answer" aria-label="Toggle offline"
+                                           translate-attr-aria-label="FM.TOOGLE_OFFLINE"></md-switch> <span class="{{av}}">Available</span>
+                            </li>
+
+                        </ul>
+
+
+
+
+
+
+                    </div>
+
+
+
+                    <span style="display: inline-block; margin-top: 68px;">Words per day</span>
+                    <md-slider-container>
+
+                        <md-slider flex min="0" max="10000" ng-model="vm.word" aria-label="red" id="red-slider">
+                        </md-slider>
+                    </md-slider-container>
+                    <span ng-if="vm.word>0" style="float:left;">{{vm.word}}</span>
+                    <span style="float:left;" ng-if="vm.word==0 && vm.word=='undefined'">0</span>
+                    <span style="float:right;">10,000</span>
+
+
+                    <div class="action-footer">
+
+                        <i class="icon-information-outline s20" style="float:left;padding-top: 3px;"></i>
+                        <span style="float:left;border:1px solid red;cursor:pointer;margin: 0 0 0 10px;padding: 4px;" ng-click="suspend()">{{vm.suspendtext}}</span>
+                        <span style="float:right;">
+
+                            <span id="hdnbookeddayspan"><i class="icon-pencil-box-outline s20" onclick="changestate('1');"></i> Booked out for {{vm.bookedval}}</span>
+                            <span id="hdninputbooked" style="display:none;">
+                                Booked out for
+                                <input ng-model="vm.bookedval" />
+                                <i class="icon-content-save s20" onclick="changestate('2');"></i>
+                            </span>
+                            day
+                        </span>
+                    </div>
+                    <div class="md-title mt-32"></div>
+                </div>
+
+
+                <div class="md-title mt-32"></div>
+                <!--Writer view-->
+                <div class="form-wrapper md-whiteframe-1dp new-capacity" flex="100" style="margin:0px 16px;" ng-if="vm.jobsrole=='Writer'">
+                    <div class="form-title new-heading">Payout</div>
+                    <div class="ph-16 pv-24 border-bottom" ng-if="vm.typeofuser=='Admin' || vm.typeofuser=='Manager' || vm.typeofuser=='Assistant'">
+                        <div layout="column" layout-gt-xs="row">
+                            <div class="layout-row w100p min_top_section">
+                                <div class="left_col">
+                                    <md-input-container>
+                                        <label>Actions</label>
+                                        <md-select ng-model="">
+                                            <md-option value="Listed" ng-click="SendTest()">Send Test</md-option>
+
+                                            <md-option value="Trash" ng-click="Suspendtest()">Suspend</md-option>
+                                        </md-select>
+                                    </md-input-container>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <table class="simple" ms-responsive-table="">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Service Name</th>
+                                <th class="text-center">General</th>
+                                <th class="text-center">Expert</th>
+                                <th class="text-center">Authority</th>
+
+                                <th class="text-right" ng-if="vm.typeofuser=='Admin' || vm.typeofuser=='Manager' || vm.typeofuser=='Assistant'">Status</th>
+                                <th ng-if="vm.typeofuser=='Admin' || vm.typeofuser=='Manager' || vm.typeofuser=='Assistant'"></th>
+
+                            </tr>
+                        </thead>
+                        <tfoot><tr><td></td></tr></tfoot>
+                        <!--<tbody id="tableservice" ng-bind-html=""></tbody>-->
+                        <tbody ng-repeat="data in vm.filteredTodos">
+                            <tr ng-if="data.status != 'ACTIVE'">
+                                <td class='name ng-binding text-center'>
+
+                                    <input type='checkbox' value="{{data._id}}" onclick='addids(this);'>
+                                    <input type='hidden' id='{{data._id}}' />
+
+                                </td>
+
+
+                                <td class='position ng-binding'>{{data.servicename}}</td>
+
+                                <td class='start-date text-center ng-binding service-select' style='cursor:pointer;' id='sl-{{data._id}}' onclick='selectthis(this);'>
+                                    <input type='number' ng-model="data.General" ng-if="vm.typeofuser=='Admin'" style="width:44px;border:none;"/> 
+                                    <span ng-if="vm.typeofuser!='Admin'">{{data.General}}</span>
+                                    {{data.Per}}
+                                </td>
+
+                                <td class='age text-center ng-binding service-select' style='cursor:pointer;' id='sl-{{data._id}}' onclick='selectthis(this);'>
+                                    <input type='number' ng-model="data.Expert" ng-if="vm.typeofuser=='Admin'" style="width:44px;border:none;"/> 
+                                    <span ng-if="vm.typeofuser!='Admin'">{{data.Expert}}</span>
+                                    {{data.Per}}
+                                </td>
+
+                                <td class='start-date text-center ng-binding service-select' style='cursor:pointer;' id='sl-{{data._id}}' onclick='selectthis(this);'>
+                                    <input type='number' ng-model="data.Authority" ng-if="vm.typeofuser=='Admin'" style="width:44px;border:none;" /> 
+                                    <span ng-if="vm.typeofuser!='Admin'">{{data.Authority}}</span>
+                                    {{data.Per}}
+                                </td>
+
+                                <td class='salary text-right ng-binding' ng-if="vm.typeofuser=='Admin' || vm.typeofuser=='Manager' || vm.typeofuser=='Assistant'">
+                                    <span style='color:red;' class='last-status'>{{data.status}}</span>
+
+                                </td>
+                                <td ng-if="vm.typeofuser=='Admin' || vm.typeofuser=='Manager' || vm.typeofuser=='Assistant'">
+                                    <i class='icon-play-circle-outline s20' style='cursor:pointer;' onclick='opennexttr(this);'></i>
+
+                                </td>
+                            </tr>
+                            <tr ng-if="data.status != 'ACTIVE'" style='display:none;'>
+                                <td colspan='7'>
+                                    <div class='rating-list00'>
+                                        <li class='list-rating'><span class='service-title'>Active:</span> <span class='payout-data'>{{data.datecreated | date: 'M-dd-yyyy'}} to Current</span></li>
+                                        <li class='list-rating'><span class='service-title'>Flags:</span> <span class='payout-data'>{{data.Flags}}</span></li>
+                                        <li class='list-rating'><span class='service-title'>Revisions:</span> <span class='payout-data'>{{data.Revisions}}</span></li>
+                                        <li class='list-rating'><span class='service-title'>Client Approved:</span> <span class='payout-data'>{{data.ClientApproved}}</span></li>
+                                        <li class='list-rating'><span class='service-title'>Auto Approved:</span> <span class='payout-data'>{{data.AutoApproved}}</span></li>
+                                        <li class='list-rating'>
+                                            <span class='service-title'>Team Rated:</span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(data.ClientRated) track by $index"></i></span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(5-data.ClientRated) track by $index"></i></span>
+                                        </li>
+                                        <li class='list-rating'>
+                                            <span class='service-title'>Client Rated:</span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(data.TeamRated) track by $index"></i></span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(5-data.TeamRated) track by $index"></i></span>
+                                        </li>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <input type="hidden" id="selectedids" />
+                </div>
+
+
+                <div class="md-title mt-32"></div>
+
+                <!--Writer view-->
+                <div class="form-wrapper md-whiteframe-1dp new-capacity " flex="100" style="margin:0px 16px;" ng-if="vm.jobsrole=='Writer'">
+                    <div class="form-title">
+                        Writing Styles
+                    </div>
+                    <div class="md-title mt-32"></div>
+                    <div layout="row" layout-align="start">
+                        <md-checkbox ng-repeat="style in vm.styles" id="{{style._id}}">{{style.stylename}}</md-checkbox>
+
+                    </div>
+                </div>
+                <div class="md-title mt-32"></div>
+                <!--Writer view-->
+                <div class="form-wrapper md-whiteframe-1dp new-capacity " flex="100" style="margin:0px 16px; clear:both; overflow:auto;" ng-if="vm.jobsrole=='Writer'">
+                    <div class="form-title">
+                        Categories & Tags
+                    </div>
+                    <div ng-repeat="cat in vm.categories">
+                        <h3>{{cat.name}}</h3>
+                        <!--<md-chips ng-model="cat.tags" class="input_tag" readonly="true" md-enable-chip-edit="true" md-removable="true">
+                            <md-chip-template>
+                                {{$chip.name}}
+                            </md-chip-template>
+                        </md-chips>-->
+                        <md-chips ng-model="cat.tags" md-autocomplete-snap
+                                  md-transform-chip="transformChip($chip)" class="chipsDiv input_tag" md-removable="true">
+
+                            <md-autocomplete md-selected-item="selectedItem"
+                                             md-search-text="searchText"
+                                             md-items="user in querySearch(searchText)"
+                                             md-item-text="user.name"
+                                             placeholder="Search for a tag">
+                                <span md-highlight-text="searchText">{{user.name}}</span>
+                                <md-not-found>
+                                    No tag found with '{{searchText}}'
+                                </md-not-found>
+                            </md-autocomplete>
+                            <md-chip-template>
+                                {{$chip.name}}
+                            </md-chip-template>
+                        </md-chips>
+                    </div>
+                </div>
+
+
+
+                <!--Editor view-->
+                <div class="form-wrapper md-whiteframe-1dp capacity new-capacity" style="padding:0px 16px; margin:0px 16px;" ng-if="vm.jobsrole=='Editor'">
+                    <div class="form-title new-heading">
+                        Capacity & Availability
+
+
+                        <ul class="action_right">
+                            <li><i class="icon-calendar-clock"></i> <span class="{{unav}}">  Unavailable</span></li>
+                            <li>
+                                <md-switch class="md-secondary" ng-click="toggle(vm.answer)" ng-model="vm.answer" aria-label="Toggle offline"
+                                           translate-attr-aria-label="FM.TOOGLE_OFFLINE"></md-switch> <span class="{{av}}">Available</span>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="editor-range-slider">
+                        <md-slider-container title="{{vm.EMhr}}Hr">
+
+                            <md-slider flex min="0" max="4" ng-model="vm.EMhr" aria-label="red" id="red-slider">
+                            </md-slider>
+                            <span style="display: inline-block; ">Early Morning</span>
+                        </md-slider-container>
+                        <md-slider-container title="{{vm.LMhr}}Hr">
+
+                            <md-slider flex min="0" max="4" ng-model="vm.LMhr" aria-label="red" id="red-slider">
+                            </md-slider>
+                            <span style="display: inline-block;  ">Late Morning</span>
+                        </md-slider-container>
+                        <md-slider-container title="{{vm.EAhr}}Hr">
+
+                            <md-slider flex min="0" max="4" ng-model="vm.EAhr" aria-label="red" id="red-slider">
+                            </md-slider>
+                            <span style="display: inline-block; ">Early Afternoon</span>
+                        </md-slider-container>
+                        <md-slider-container title="{{vm.LAhr}}Hr">
+
+                            <md-slider flex min="0" max="4" ng-model="vm.LAhr" aria-label="red" id="red-slider">
+                            </md-slider>
+                            <span style="display: inline-block;  ">Late Afternoon</span>
+                        </md-slider-container>
+                        <md-slider-container title="{{vm.EEhr}}Hr">
+
+                            <md-slider flex min="0" max="4" ng-model="vm.EEhr" aria-label="red" id="red-slider">
+                            </md-slider>
+                            <span style="display: inline-block;  ">Early Evening</span>
+                        </md-slider-container>
+                        <md-slider-container title="{{vm.LEhr}}Hr">
+
+                            <md-slider flex min="0" max="4" ng-model="vm.LEhr" aria-label="red" id="red-slider">
+                            </md-slider>
+                            <span style="display: inline-block;  ">Late Evening</span>
+                        </md-slider-container>
+                    </div>
+
+
+                    <div class="action-footer">
+                        <span style="float:left;" id="selectdays">
+                            <md-checkbox type="checkbox" disabled value="Sun"> Sun</md-checkbox>
+                            <md-checkbox type="checkbox" ng-change="vm.countdays(vm.Mon)" ng-model="vm.Mon" value="Mon"> Mon</md-checkbox>
+                            <md-checkbox type="checkbox" ng-change="vm.countdays(vm.Tue)" ng-model="vm.Tue" value="Tue"> Tue</md-checkbox>
+                            <md-checkbox type="checkbox" ng-change="vm.countdays(vm.Wed)" ng-model="vm.Wed" value="Wed"> Wed</md-checkbox>
+                            <md-checkbox type="checkbox" ng-change="vm.countdays(vm.Thur)" ng-model="vm.Thur" value="Thur"> Thur</md-checkbox>
+                            <md-checkbox type="checkbox" ng-change="vm.countdays(vm.Fri)" ng-model="vm.Fri" value="Fri"> Fri</md-checkbox>
+                            <md-checkbox type="checkbox" ng-change="vm.countdays(vm.Sat)" ng-model="vm.Sat" value="Sat"> Sat</md-checkbox>
+                        </span>
+                        <div style="float:right;">
+                            <span>
+                                <span id="hdnbookeddayspan">
+                                    <!--<i class="icon-pencil-box-outline s20"></i>--> Available
+                                    {{vm.EMhr + vm.LMhr +vm.EAhr +vm.LAhr +vm.EEhr+vm.LEhr}}
+                                    Hours Per Day, <span id="count">{{vm.countofseleteddays}}</span> days per week
+                                </span>
+
+                            </span>
+                            <span class="suspendtext">
+                                <i class="icon-information-outline s20"></i>
+                                <span ng-click="suspend()">{{vm.suspendtext}}</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="md-title mt-32"></div>
+                    <div class="md-title mt-32"></div>
+                    <div class="md-title mt-32"></div>
+                    <div class="md-title mt-32"></div>
+                </div>
+
+
+                <div class="md-title mt-32"></div>
+                <!--Editor view-->
+                <div class="form-wrapper md-whiteframe-1dp new-capacity" flex="100" style="margin:0px 16px;" ng-if="vm.jobsrole=='Editor'">
+                    <div class="form-title new-heading">Payout</div>
+                    <div class="ph-16 pv-24 border-bottom " ng-if="vm.typeofuser=='Admin' || vm.typeofuser=='Manager' || vm.typeofuser=='Assistant'">
+                        <div layout="column" layout-gt-xs="row">
+                            <div class="layout-row w100p min_top_section">
+                                <div class="left_col">
+                                    <md-input-container>
+                                        <label>Actions</label>
+                                        <md-select ng-model="">
+                                            <md-option value="Listed" ng-click="SendTest()">Send Test</md-option>
+
+                                            <md-option value="Trash" ng-click="Suspendtest()">Suspend</md-option>
+                                        </md-select>
+                                    </md-input-container>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <table class="simple" ms-responsive-table="">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Service Types</th>
+                                <th class="text-right">$ Level 1</th>
+                                <th class="text-right">$ Level 2</th>
+
+                                <th class="text-right" ng-if="vm.typeofuser=='Admin' || vm.typeofuser=='Manager' || vm.typeofuser=='Assistant'">Status</th>
+                                <th ng-if="vm.typeofuser=='Admin' || vm.typeofuser=='Manager' || vm.typeofuser=='Assistant'"></th>
+
+                            </tr>
+                        </thead>
+                        <tfoot><tr><td></td></tr></tfoot>
+                        <tbody ng-repeat="data in vm.filteredTodos">
+                            <tr ng-if="data.status != 'ACTIVE'">
+                                <td class='name ng-binding text-center'>
+
+                                    <input type='checkbox' value="{{data._id}}" onclick='addids(this);'>
+                                    <input type='hidden' id='{{data._id}}' />
+
+                                </td>
+
+
+                                <td class='position ng-binding'>{{data.servicename}}</td>
+
+                               
+                                <td class='start-date text-center text-right ng-binding service-select' style='cursor:pointer;' id='sl-{{data._id}}' onclick='selectthis(this);'> 
+                                $ <input type='number' ng-model="data.Level1" ng-if="vm.typeofuser=='Admin'" style="width:44px;border:none;"/>
+                                <span ng-if="vm.typeofuser!='Admin'">{{data.Level1}}</span>
+                                 {{data.Per}} </td>
+                               
+                                <td class='age text-center text-right ng-binding service-select' style='cursor:pointer;' id='sl-{{data._id}}' onclick='selectthis(this);'>
+                                    $ <input type='number' ng-model="data.Level2" ng-if="vm.typeofuser=='Admin'" style="width:44px;border:none;"/> 
+                                    <span ng-if="vm.typeofuser!='Admin'">{{data.Level2}}</span>
+                                    {{data.Per}}
+                                </td>
+                                
+
+                                <td class='salary text-center text-right ng-binding' ng-if="vm.typeofuser=='Admin' || vm.typeofuser=='Manager' || vm.typeofuser=='Assistant'">
+                                    <span style='color:red;' class='last-status'>{{data.status}}</span>
+
+                                </td>
+                                <td ng-if="vm.typeofuser=='Admin' || vm.typeofuser=='Manager' || vm.typeofuser=='Assistant'">
+                                    <i class='icon-play-circle-outline s20' style='cursor:pointer;' onclick='opennexttr(this);'></i>
+
+                                </td>
+                            </tr>
+                            <tr ng-if="data.status != 'ACTIVE'" style='display:none;'>
+                                <td colspan='7'>
+                                    <div class='rating-list00'>
+                                        <li class='list-rating'><span class='service-title'>Active:</span> <span class='payout-data'>{{data.datecreated | date: 'M-dd-yyyy'}} to Current</span></li>
+                                        <li class='list-rating'><span class='service-title'>Flags:</span> <span class='payout-data'>{{data.Flags}}</span></li>
+                                        <li class='list-rating'><span class='service-title'>Revisions:</span> <span class='payout-data'>{{data.Revisions}}</span></li>
+                                        <li class='list-rating'><span class='service-title'>Client Approved:</span> <span class='payout-data'>{{data.ClientApproved}}</span></li>
+                                        <li class='list-rating'><span class='service-title'>Auto Approved:</span> <span class='payout-data'>{{data.AutoApproved}}</span></li>
+                                        <li class='list-rating'>
+                                            <span class='service-title'>Team Rated:</span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(data.ClientRated) track by $index"></i></span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(5-data.ClientRated) track by $index"></i></span>
+                                        </li>
+                                        <li class='list-rating'>
+                                            <span class='service-title'>Client Rated:</span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(data.TeamRated) track by $index"></i></span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(5-data.TeamRated) track by $index"></i></span>
+                                        </li>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <input type="hidden" id="selectedids" />
+                </div>
+
+
+
+
+
+                <!--custom view-->
+                <div class="form-wrapper md-whiteframe-1dp capacity new-capacity" style="padding:0px 16px; margin:0px 16px;" ng-if="vm.jobsrole=='Custom'">
+                    <div class="form-title new-heading">
+                        Capacity & Availability
+                        <ul class="action_right">
+                            <li><i class="icon-calendar-clock"></i> <span class="{{unav}}">  Unavailable</span></li>
+                            <li>
+                                <md-switch class="md-secondary" ng-click="toggle(vm.answer)" ng-model="vm.answer" aria-label="Toggle offline"
+                                           translate-attr-aria-label="FM.TOOGLE_OFFLINE"></md-switch> <span class="{{av}}">Available</span>
+                            </li>
+
+                        </ul>
+                    </div>
+
+
+
+                    <span style="display: inline-block; margin-top: 68px;">Tasks</span>
+                    <md-slider-container>
+
+                        <md-slider flex min="5" max="15" ng-model="vm.word" aria-label="red" id="red-slider">
+                        </md-slider>
+                    </md-slider-container>
+                    <span ng-if="vm.word>0" style="float:left;">{{vm.word}} min</span>
+                    <span style="float:left;" ng-if="vm.word=='undefined'">0 min</span>
+                    <span style="float:right;">15 max</span>
+
+
+                    <div class="action-footer">
+
+                        <i class="icon-information-outline s20" style="float:left;padding-top: 3px;"></i>
+                        <span style="float:left;border:1px solid red;cursor:pointer;margin: 0 0 0 10px;padding: 4px;" ng-click="suspend()">{{vm.suspendtext}}</span>
+                        <span style="float:right;">
+
+                            <span id="hdnbookeddayspan"><i class="icon-pencil-box-outline s20" onclick="changestate('1');"></i> Booked out for {{vm.bookedval}}</span>
+                            <span id="hdninputbooked" style="display:none;">
+                                Booked out for
+                                <input ng-model="vm.bookedval" />
+                                <i class="icon-content-save s20" onclick="changestate('2');"></i>
+                            </span>
+                            day
+                        </span>
+                    </div>
+                    <div class="md-title mt-32"></div>
+                </div>
+
+
+                <div class="md-title mt-32"></div>
+                <!--Custom view-->
+                <div class="form-wrapper md-whiteframe-1dp new-capacity" flex="100" style="margin:0px 16px;" ng-if="vm.jobsrole=='Custom'">
+                    <div class="form-title new-heading">Payout</div>
+                    <div class="ph-16 pv-24 border-bottom " ng-if="vm.typeofuser=='Admin' || vm.typeofuser=='Manager' || vm.typeofuser=='Assistant'">
+                        <div layout="column" layout-gt-xs="row">
+                            <div class="layout-row w100p min_top_section">
+                                <div class="left_col">
+                                    <md-input-container>
+                                        <label>Actions</label>
+                                        <md-select ng-model="">
+                                            <!--<md-option value="Listed" ng-click="SendTest()">Send Test</md-option>-->
+
+                                            <md-option value="Trash" ng-click="Suspendtest()">Suspend</md-option>
+                                        </md-select>
+                                    </md-input-container>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <table class="simple" ms-responsive-table="">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Service Types</th>
+                                <th class="text-right">$ Level 1</th>
+                                <th class="text-right">$ Level 2</th>
+
+                                <th class="text-right" ng-if="vm.typeofuser=='Admin' || vm.typeofuser=='Manager' || vm.typeofuser=='Assistant'">Status</th>
+                                <th ng-if="vm.typeofuser=='Admin' || vm.typeofuser=='Manager' || vm.typeofuser=='Assistant'"></th>
+
+                            </tr>
+                        </thead>
+                        <tfoot><tr><td></td></tr></tfoot>
+                        <tbody ng-repeat="data in vm.filteredTodos">
+                            <tr ng-if="data.status != 'ACTIVE'">
+                                <td class='name ng-binding text-center'>
+
+                                    <input type='checkbox' value="{{data._id}}" onclick='addids(this);'>
+                                    <input type='hidden' id='{{data._id}}' />
+
+                                </td>
+
+
+                                <td class='position ng-binding'>{{data.servicename}}</td>
+
+
+                                <td class='start-date text-center text-right ng-binding service-select' style='cursor:pointer;' id='sl-{{data._id}}' onclick='selectthis(this);'>
+                                    $ <input type='number' ng-model="data.Level1" ng-if="vm.typeofuser=='Admin'" style="width:44px;border:none;"/> 
+                                    <span ng-if="vm.typeofuser!='Admin'">{{data.Level1}}</span>
+                                    {{data.Per}}
+                                </td>
+
+                                <td class='age text-center text-right ng-binding service-select' style='cursor:pointer;' id='sl-{{data._id}}' onclick='selectthis(this);'>
+                                    $ <input type='number' ng-model="data.Level2" ng-if="vm.typeofuser=='Admin'" style="width:44px;border:none;"/> 
+                                    <span ng-if="vm.typeofuser!='Admin'">{{data.Level2}}</span>
+                                    {{data.Per}}
+                                </td>
+
+
+                                <td class='salary text-center text-right ng-binding' ng-if="vm.typeofuser=='Admin' || vm.typeofuser=='Manager' || vm.typeofuser=='Assistant'">
+                                    <span style='color:red;' class='last-status'>{{data.status}}</span>
+
+                                </td>
+                                <td ng-if="vm.typeofuser=='Admin' || vm.typeofuser=='Manager' || vm.typeofuser=='Assistant'">
+                                    <i class='icon-play-circle-outline s20' style='cursor:pointer;' onclick='opennexttr(this);'></i>
+
+                                </td>
+                            </tr>
+                            <tr ng-if="data.status != 'ACTIVE'" style='display:none;'>
+                                <td colspan='7'>
+                                    <div class='rating-list00'>
+                                        <li class='list-rating'><span class='service-title'>Active:</span> <span class='payout-data'>{{data.datecreated | date: 'M-dd-yyyy'}} to Current</span></li>
+                                        <li class='list-rating'><span class='service-title'>Flags:</span> <span class='payout-data'>{{data.Flags}}</span></li>
+                                        <li class='list-rating'><span class='service-title'>Revisions:</span> <span class='payout-data'>{{data.Revisions}}</span></li>
+                                        <li class='list-rating'><span class='service-title'>Client Approved:</span> <span class='payout-data'>{{data.ClientApproved}}</span></li>
+                                        <li class='list-rating'><span class='service-title'>Auto Approved:</span> <span class='payout-data'>{{data.AutoApproved}}</span></li>
+                                        <li class='list-rating'>
+                                            <span class='service-title'>Team Rated:</span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(data.ClientRated) track by $index"></i></span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(5-data.ClientRated) track by $index"></i></span>
+                                        </li>
+                                        <li class='list-rating'>
+                                            <span class='service-title'>Client Rated:</span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(data.TeamRated) track by $index"></i></span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(5-data.TeamRated) track by $index"></i></span>
+                                        </li>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <input type="hidden" id="selectedids" />
+                </div>
+
+
+                <!--Social Media Manager view-->
+                <div class="form-wrapper md-whiteframe-1dp capacity new-capacity" style="padding:0px 16px; margin:0px 16px;" ng-if="vm.jobsrole=='Social Media Manager'">
+                    <div class="form-title new-heading">
+                        Capacity & Availability
+                        <ul class="action_right">
+                            <li><i class="icon-calendar-clock"></i> <span class="{{unav}}">  Unavailable</span></li>
+                            <li>
+                                <md-switch class="md-secondary" ng-click="toggle(vm.answer)" ng-model="vm.answer" aria-label="Toggle offline"
+                                           translate-attr-aria-label="FM.TOOGLE_OFFLINE"></md-switch> <span class="{{av}}">Available</span>
+                            </li>
+
+                        </ul>
+                    </div>
+
+
+
+                    <span style="display: inline-block; margin-top: 68px;">Tasks</span>
+                    <md-slider-container>
+
+                        <md-slider flex min="5" max="15" ng-model="vm.word" aria-label="red" id="red-slider">
+                        </md-slider>
+                    </md-slider-container>
+                    <span ng-if="vm.word>0" style="float:left;">{{vm.word}} min</span>
+                    <span style="float:left;" ng-if="vm.word=='undefined'">0 min</span>
+                    <span style="float:right;">15 max</span>
+
+
+                    <div class="action-footer">
+
+                        <i class="icon-information-outline s20" style="float:left;padding-top: 3px;"></i>
+                        <span style="float:left;border:1px solid red;cursor:pointer;margin: 0 0 0 10px;padding: 4px;" ng-click="suspend()">{{vm.suspendtext}}</span>
+                        <span style="float:right;">
+
+                            <span id="hdnbookeddayspan"><i class="icon-pencil-box-outline s20" onclick="changestate('1');"></i> Booked out for {{vm.bookedval}}</span>
+                            <span id="hdninputbooked" style="display:none;">
+                                Booked out for
+                                <input ng-model="vm.bookedval" />
+                                <i class="icon-content-save s20" onclick="changestate('2');"></i>
+                            </span>
+                            day
+                        </span>
+                    </div>
+                    <div class="md-title mt-32"></div>
+                </div>
+
+
+                <div class="md-title mt-32"></div>
+                <!--Social Media Manager view-->
+                <div class="form-wrapper md-whiteframe-1dp new-capacity" flex="100" style="margin:0px 16px;" ng-if="vm.jobsrole=='Social Media Manager'">
+                    <div class="form-title new-heading">Payout</div>
+                    <div class="ph-16 pv-24 border-bottom " ng-if="vm.typeofuser=='Admin'">
+                        <div layout="column" layout-gt-xs="row">
+                            <div class="layout-row w100p min_top_section">
+                                <div class="left_col">
+                                    <md-input-container>
+                                        <label>Actions</label>
+                                        <md-select ng-model="">
+                                            <!--<md-option value="Listed" ng-click="SendTest()">Send Test</md-option>-->
+
+                                            <md-option value="Trash" ng-click="Suspendtest()">Suspend</md-option>
+                                        </md-select>
+                                    </md-input-container>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <table class="simple" ms-responsive-table="">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Service Types</th>
+                                <th class="text-right">$ Level 1</th>
+                                <th class="text-right">$ Level 2</th>
+
+                                <th class="text-right" ng-if="vm.typeofuser=='Admin'">Status</th>
+                                <th ng-if="vm.typeofuser=='Admin'"></th>
+
+                            </tr>
+                        </thead>
+                        <tfoot><tr><td></td></tr></tfoot>
+                        <tbody ng-repeat="data in vm.filteredTodos">
+                            <tr ng-if="data.status != 'ACTIVE'">
+                                <td class='name ng-binding text-center'>
+
+                                    <input type='checkbox' value="{{data._id}}" onclick='addids(this);'>
+                                    <input type='hidden' id='{{data._id}}' />
+
+                                </td>
+
+
+                                <td class='position ng-binding'>{{data.servicename}}</td>
+
+
+                                <td class='start-date text-center text-right ng-binding service-select' style='cursor:pointer;' id='sl-{{data._id}}' onclick='selectthis(this);'>
+                                    $ <input type='number' ng-model="data.Level1" ng-if="vm.typeofuser=='Admin'" style="width:44px;border:none;"/> 
+                                    <span ng-if="vm.typeofuser!='Admin'">{{data.Level1}}</span>
+                                    {{data.Per}}
+                                </td>
+
+                                <td class='age text-center text-right ng-binding service-select' style='cursor:pointer;' id='sl-{{data._id}}' onclick='selectthis(this);'>
+                                    $ <input type='number' ng-model="data.Level2" ng-if="vm.typeofuser=='Admin'" style="width:44px;border:none;"/> 
+                                    <span ng-if="vm.typeofuser!='Admin'">{{data.Level2}}</span>
+                                    {{data.Per}}
+                                </td>
+
+
+                                <td class='salary text-right ng-binding' ng-if="vm.typeofuser=='Admin'">
+                                    <span style='color:red;' class='last-status'>{{data.status}}</span>
+
+                                </td>
+                                <td ng-if="vm.typeofuser=='Admin'">
+                                    <i class='icon-play-circle-outline s20' style='cursor:pointer;' onclick='opennexttr(this);'></i>
+
+                                </td>
+                            </tr>
+                            <tr ng-if="data.status != 'ACTIVE'" style='display:none;'>
+                                <td colspan='7'>
+                                    <div class='rating-list00'>
+                                        <li class='list-rating'><span class='service-title'>Active:</span> <span class='payout-data'>{{data.datecreated | date: 'M-dd-yyyy'}} to Current</span></li>
+                                        <li class='list-rating'><span class='service-title'>Flags:</span> <span class='payout-data'>{{data.Flags}}</span></li>
+                                        <li class='list-rating'><span class='service-title'>Revisions:</span> <span class='payout-data'>{{data.Revisions}}</span></li>
+                                        <li class='list-rating'><span class='service-title'>Client Approved:</span> <span class='payout-data'>{{data.ClientApproved}}</span></li>
+                                        <li class='list-rating'><span class='service-title'>Auto Approved:</span> <span class='payout-data'>{{data.AutoApproved}}</span></li>
+                                        <li class='list-rating'>
+                                            <span class='service-title'>Team Rated:</span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(data.ClientRated) track by $index"></i></span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(5-data.ClientRated) track by $index"></i></span>
+                                        </li>
+                                        <li class='list-rating'>
+                                            <span class='service-title'>Client Rated:</span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(data.TeamRated) track by $index"></i></span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(5-data.TeamRated) track by $index"></i></span>
+                                        </li>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <input type="hidden" id="selectedids" />
+                </div>
+
+
+
+
+
+                <div class="md-title mt-32"></div>
+                <!--Sales view-->
+                <div class="form-wrapper md-whiteframe-1dp new-capacity" flex="100" style="margin:0px 16px;" ng-if="vm.jobsrole=='Sales'">
+                    <div class="form-title new-heading">Payout</div>
+                    <div class="ph-16 pv-24 border-bottom " ng-if="vm.typeofuser=='Admin'">
+                        <div layout="column" layout-gt-xs="row">
+                            <div class="layout-row w100p min_top_section">
+                                <div class="left_col">
+                                    <md-input-container>
+                                        <label>Actions</label>
+                                        <md-select ng-model="">
+                                            <!--<md-option value="Listed" ng-click="SendTestSales()">Send Test</md-option>-->
+
+                                            <md-option value="Trash" ng-click="SuspendtestSales()">Suspend</md-option>
+                                        </md-select>
+                                    </md-input-container>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <table class="simple" ms-responsive-table="">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Service Types</th>
+                                <th class="text-right">$ Level 1</th>
+                                <th class="text-right">$ Level 2</th>
+
+                                <th class="text-right" ng-if="vm.typeofuser=='Admin'">Status</th>
+                                <th ng-if="vm.typeofuser=='Admin'"></th>
+
+                            </tr>
+                        </thead>
+                        <tfoot><tr><td></td></tr></tfoot>
+                        <tbody ng-repeat="data in vm.filteredTodos">
+                            <tr ng-if="data.status != 'ACTIVE'">
+                                <td class='name ng-binding text-center'>
+
+                                    <input type='checkbox' value="{{data._id}}" onclick='addids(this);'>
+                                    <input type='hidden' id='{{data._id}}' />
+
+                                </td>
+
+
+                                <td class='position ng-binding'>{{data.servicename}}</td>
+
+
+
+                              
+
+                                <td class='start-date text-center text-right ng-binding service-select' style='cursor:pointer;' id='sl-{{data._id}}' onclick='selectthis(this);'>
+                                    $ <input type='number' ng-model="data.Level1" ng-if="vm.typeofuser=='Admin'" style="width:44px;border:none;"/>
+                                    <span ng-if="vm.typeofuser!='Admin'">{{data.Level1}}</span>
+                                    {{data.Per}}
+                                </td>
+
+                                <td class='age text-center text-right ng-binding service-select' style='cursor:pointer;' id='sl-{{data._id}}' onclick='selectthis(this);'>
+                                    $ <input type='number' ng-model="data.Level2" ng-if="vm.typeofuser=='Admin'" style="width:44px;border:none;"/>
+                                    <span ng-if="vm.typeofuser!='Admin'">{{data.Level2}}</span>
+                                    {{data.Per}}
+                                </td>
+                                <td class='salary text-right ng-binding' ng-if="vm.typeofuser=='Admin'">
+                                    <span style='color:red;' class='last-status'>{{data.status}}</span>
+
+                                </td>
+                                <td ng-if="vm.typeofuser=='Admin'">
+                                    <i class='icon-play-circle-outline s20' style='cursor:pointer;' onclick='opennexttr(this);'></i>
+
+                                </td>
+                            </tr>
+                            <tr ng-if="data.status != 'ACTIVE'" style='display:none;'>
+                                <td colspan='7'>
+                                    <div class='rating-list00'>
+                                        <li class='list-rating'><span class='service-title'>Active:</span> <span class='payout-data'>{{data.datecreated | date: 'M-dd-yyyy'}} to Current</span></li>
+                                        <li class='list-rating'><span class='service-title'>Flags:</span> <span class='payout-data'>{{data.Flags}}</span></li>
+                                        <li class='list-rating'><span class='service-title'>Revisions:</span> <span class='payout-data'>{{data.Revisions}}</span></li>
+                                        <li class='list-rating'><span class='service-title'>Client Approved:</span> <span class='payout-data'>{{data.ClientApproved}}</span></li>
+                                        <li class='list-rating'><span class='service-title'>Auto Approved:</span> <span class='payout-data'>{{data.AutoApproved}}</span></li>
+                                        <li class='list-rating'>
+                                            <span class='service-title'>Team Rated:</span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(data.ClientRated) track by $index"></i></span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(5-data.ClientRated) track by $index"></i></span>
+                                        </li>
+                                        <li class='list-rating'>
+                                            <span class='service-title'>Client Rated:</span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(data.TeamRated) track by $index"></i></span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(5-data.TeamRated) track by $index"></i></span>
+                                        </li>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <input type="hidden" id="selectedids" />
+                </div>
+
+                <div class="md-title mt-32"></div>
+                <!--Manager view-->
+                <div class="form-wrapper md-whiteframe-1dp new-capacity" flex="100" style="margin:0px 16px;" ng-if="vm.jobsrole=='Manager'">
+                    <div class="form-title new-heading">Payout</div>
+                    <div class="ph-16 pv-24 border-bottom " ng-if="vm.typeofuser=='Admin'">
+                        <div layout="column" layout-gt-xs="row">
+                            <div class="layout-row w100p min_top_section">
+                                <div class="left_col">
+                                    <md-input-container>
+                                        <label>Actions</label>
+                                        <md-select ng-model="">
+                                            <!--<md-option value="Listed" ng-click="SendTestSales()">Send Test</md-option>-->
+
+                                            <md-option value="Trash" ng-click="SuspendtestSales()">Suspend</md-option>
+                                        </md-select>
+                                    </md-input-container>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <table class="simple" ms-responsive-table="">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Service Types</th>
+                                <th class="text-right">$ Level 1</th>
+                                <th class="text-right">$ Level 2</th>
+
+                                <th class="text-right" ng-if="vm.typeofuser=='Admin'">Status</th>
+                                <th ng-if="vm.typeofuser=='Admin'"></th>
+
+                            </tr>
+                        </thead>
+                        <tfoot><tr><td></td></tr></tfoot>
+                        <tbody ng-repeat="data in vm.filteredTodos">
+                            <tr ng-if="data.status != 'ACTIVE'">
+                                <td class='name ng-binding text-center'>
+
+                                    <input type='checkbox' value="{{data._id}}" onclick='addids(this);'>
+                                    <input type='hidden' id='{{data._id}}' />
+
+                                </td>
+
+
+                                <td class='position ng-binding'>{{data.servicename}}</td>
+
+
+
+
+
+                                <td class='start-date text-center text-right ng-binding service-select' style='cursor:pointer;' id='sl-{{data._id}}' onclick='selectthis(this);'>
+                                    $ <input type='number' ng-model="data.Level1" ng-if="vm.typeofuser=='Admin'"  style="width:44px;border:none;"/>
+                                    <span ng-if="vm.typeofuser!='Admin'">{{data.Level1}}</span>
+                                    {{data.Per}}
+                                </td>
+
+                                <td class='age text-center text-right ng-binding service-select' style='cursor:pointer;' id='sl-{{data._id}}' onclick='selectthis(this);'>
+                                    $ <input type='number' ng-model="data.Level2" ng-if="vm.typeofuser=='Admin'"  style="width:44px;border:none;"/>
+                                    <span ng-if="vm.typeofuser!='Admin'">{{data.Level2}}</span>
+                                    {{data.Per}}
+                                </td>
+
+                                <td class='salary text-right ng-binding' ng-if="vm.typeofuser=='Admin'">
+                                    <span style='color:red;' class='last-status'>{{data.status}}</span>
+
+                                </td>
+                                <td ng-if="vm.typeofuser=='Admin'">
+                                    <i class='icon-play-circle-outline s20' style='cursor:pointer;' onclick='opennexttr(this);'></i>
+
+                                </td>
+                            </tr>
+                            <tr ng-if="data.status != 'ACTIVE'" style='display:none;'>
+                                <td colspan='7'>
+                                    <div class='rating-list00'>
+                                        <li class='list-rating'><span class='service-title'>Active:</span> <span class='payout-data'>{{data.datecreated | date: 'M-dd-yyyy'}} to Current</span></li>
+                                        <li class='list-rating'><span class='service-title'>Flags:</span> <span class='payout-data'>{{data.Flags}}</span></li>
+                                        <li class='list-rating'><span class='service-title'>Revisions:</span> <span class='payout-data'>{{data.Revisions}}</span></li>
+                                        <li class='list-rating'><span class='service-title'>Client Approved:</span> <span class='payout-data'>{{data.ClientApproved}}</span></li>
+                                        <li class='list-rating'><span class='service-title'>Auto Approved:</span> <span class='payout-data'>{{data.AutoApproved}}</span></li>
+                                        <li class='list-rating'>
+                                            <span class='service-title'>Team Rated:</span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(data.ClientRated) track by $index"></i></span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(5-data.ClientRated) track by $index"></i></span>
+                                        </li>
+                                        <li class='list-rating'>
+                                            <span class='service-title'>Client Rated:</span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(data.TeamRated) track by $index"></i></span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(5-data.TeamRated) track by $index"></i></span>
+                                        </li>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <input type="hidden" id="selectedids" />
+                </div>
+
+
+                <div class="md-title mt-32"></div>
+                <!--Assistant view-->
+                <div class="form-wrapper md-whiteframe-1dp new-capacity" flex="100" style="margin:0px 16px;" ng-if="vm.jobsrole=='Assistant'">
+                    <div class="form-title new-heading">Payout</div>
+                    <div class="ph-16 pv-24 border-bottom " ng-if="vm.typeofuser=='Admin'">
+                        <div layout="column" layout-gt-xs="row">
+                            <div class="layout-row w100p min_top_section">
+                                <div class="left_col">
+                                    <md-input-container>
+                                        <label>Actions</label>
+                                        <md-select ng-model="">
+                                            <!--<md-option value="Listed" ng-click="SendTestSales()">Send Test</md-option>-->
+
+                                            <md-option value="Trash" ng-click="SuspendtestSales()">Suspend</md-option>
+                                        </md-select>
+                                    </md-input-container>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <table class="simple" ms-responsive-table="">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Service Types</th>
+                                <th class="text-right">$ Level 1</th>
+                                <th class="text-right">$ Level 2</th>
+
+                                <th class="text-right" ng-if="vm.typeofuser=='Admin'">Status</th>
+                                <th ng-if="vm.typeofuser=='Admin'"></th>
+
+                            </tr>
+                        </thead>
+                        <tfoot><tr><td></td></tr></tfoot>
+                        <tbody ng-repeat="data in vm.filteredTodos">
+                            <tr ng-if="data.status != 'ACTIVE'">
+                                <td class='name ng-binding text-center'>
+
+                                    <input type='checkbox' value="{{data._id}}" onclick='addids(this);'>
+                                    <input type='hidden' id='{{data._id}}' />
+
+                                </td>
+
+
+                                <td class='position ng-binding'>{{data.servicename}}</td>
+
+
+
+
+                                <td class='start-date text-center text-right ng-binding service-select' style='cursor:pointer;' id='sl-{{data._id}}' onclick='selectthis(this);'>
+                                    $ <input type='number' ng-model="data.Level1" ng-if="vm.typeofuser=='Admin'" style="width:44px;border:none;"/>
+                                    <span ng-if="vm.typeofuser!='Admin'">{{data.Level1}}</span>
+                                    {{data.Per}}
+                                </td>
+
+                                <td class='age text-center text-right ng-binding service-select' style='cursor:pointer;' id='sl-{{data._id}}' onclick='selectthis(this);'>
+                                    $ <input type='number' ng-model="data.Level2" ng-if="vm.typeofuser=='Admin'" style="width:44px;border:none;"/>
+                                    <span ng-if="vm.typeofuser!='Admin'">{{data.Level2}}</span>
+                                    {{data.Per}}
+                                </td>
+
+                                <td class='salary text-right ng-binding' ng-if="vm.typeofuser=='Admin'">
+                                    <span style='color:red;' class='last-status'>{{data.status}}</span>
+
+                                </td>
+                                <td ng-if="vm.typeofuser=='Admin'">
+                                    <i class='icon-play-circle-outline s20' style='cursor:pointer;' onclick='opennexttr(this);'></i>
+
+                                </td>
+                            </tr>
+                            <tr ng-if="data.status != 'ACTIVE'" style='display:none;'>
+                                <td colspan='7'>
+                                    <div class='rating-list00'>
+                                        <li class='list-rating'><span class='service-title'>Active:</span> <span class='payout-data'>{{data.datecreated | date: 'M-dd-yyyy'}} to Current</span></li>
+                                        <li class='list-rating'><span class='service-title'>Flags:</span> <span class='payout-data'>{{data.Flags}}</span></li>
+                                        <li class='list-rating'><span class='service-title'>Revisions:</span> <span class='payout-data'>{{data.Revisions}}</span></li>
+                                        <li class='list-rating'><span class='service-title'>Client Approved:</span> <span class='payout-data'>{{data.ClientApproved}}</span></li>
+                                        <li class='list-rating'><span class='service-title'>Auto Approved:</span> <span class='payout-data'>{{data.AutoApproved}}</span></li>
+                                        <li class='list-rating'>
+                                            <span class='service-title'>Team Rated:</span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(data.ClientRated) track by $index"></i></span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(5-data.ClientRated) track by $index"></i></span>
+                                        </li>
+                                        <li class='list-rating'>
+                                            <span class='service-title'>Client Rated:</span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(data.TeamRated) track by $index"></i></span>
+                                            <span class='payout-data'><i class='icon icon-star s10' ng-repeat="star in getNumber(5-data.TeamRated) track by $index"></i></span>
+                                        </li>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <input type="hidden" id="selectedids" />
+                </div>
+
+
+                <!--Button or actions-->
+                <div class="clearfix"></div>
+                <div layout="column" layout-gt-xs="row" class="pull-right">
+                    <md-button class="md-raised md-accent graybg" aria-label="Cancel"
+                               ng-click="vm.cancel()">
+                        Cancel
+                    </md-button>
+
+                    <md-button type="submit" class="md-raised md-accent" aria-label="Submit"
+                               ng-disabled="basicForm.$invalid || basicForm.$pristine
+
+                               || rolesform.$invalid || rolesform.$pristine" ng-click="createuser()">
+                        CREATE {{vm.jobsrole}}
+                    </md-button>
+
+                </div>
+                <div class="md-title mt-32"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function changestate(type) {
+
+        if (type == '1') {
+            $('#hdnbookeddayspan').hide();
+            $('#hdninputbooked').show();
+        }
+        else {
+            $('#hdnbookeddayspan').show();
+            $('#hdninputbooked').hide();
+        }
+    }
+    function opennexttr(ev) {
+        $(ev).parent('td').parent('tr').next('tr').toggle();
+    }
+    function addids(id) {
+
+        var selectedValues = "";
+        $('#tableservice').find('input[type="checkbox"]:checked').each(function () {
+            selectedValues += "," + $(this).val();
+        });
+        $('#selectedids').val(selectedValues);
+
+        $(id).parent('td').parent('tr').find('.service-select').each(function () {
+            $(this).removeClass("service-select-active");
+        });
+        $(id).parent('td').parent('tr').find('input[type="hidden"]').each(function () {
+            $(this).val("");
+        });
+    }
+    function selectthis(ev) {
+
+        $(ev).parent('tr').find('input[type="checkbox"]:checked').each(function () {
+            $(ev).parent('tr').find('.service-select').each(function () {
+                $(this).removeClass("service-select-active");
+            });
+            $(ev).addClass("service-select-active");
+            $(ev).parent('tr').find('input[type="hidden"]').each(function () {
+                $(this).val($(ev).html() + '-' + $(ev).parent('tr').find('.last-status').html());
+            });
+
+        });
+    }
+    function countdays() {
+        var i = 0;
+
+        //$('#selectdays').find('md-checkbox[type="checkbox"]:checked').each(function () {
+        //    i = i + 1;
+        //});
+        $('#selectdays').find('md-checkbox').each(function () {
+            if ($(this).hasClass('md-checked')) {
+                i = i + 1;
+            }
+
+        });
+        $('#count').text(i);
+    }
+</script>
+<script>
+    // $('a[href$="/Tests"]').addClass("active md-accent-bg");
+    $(document).ready(function () {
+        $('.ms-navigation-item').find('a').each(function () {
+            if ($(this).attr('href') == '/Users') {
+                $(this).addClass("active md-accent-bg");
+            }
+        });
+    });
+    function shhdff(ev) {
+
+        $(ev).prev('option').prop("selected", true);
+
+        $(ev).parent('select').parent('td').parent('tr').hide();
+        $(ev).parent('select').parent('td').parent('tr').prev('tr').hide();
+        $(ev).parent('select').parent('td').parent('tr').next('tr').hide();
+        $(ev).parent('select').parent('td').parent('tr').prev('tr').prev('tr').show();
+        $(ev).parent('select').parent('td').parent('tr').find('input[type="checkbox"]').each(function () {
+            $(this).prop('checked', false);
+        });
+        $(ev).parent('select').parent('td').parent('tr').find('input[type="hidden"]').each(function () {
+            $(this).val("");
+
+        });
+
+        $(ev).parent('select').parent('td').parent('tr').find('.service-select-active').each(function () {
+            $(this).removeClass("service-select-active");
+        });
+    }
+    function shhdll(ev) {
+        $(ev).prev('option').prop("selected", true);
+
+        $(ev).parent('select').parent('td').parent('tr').hide();
+        $(ev).parent('select').parent('td').parent('tr').next('tr').hide();
+        $(ev).parent('select').parent('td').parent('tr').prev('tr').hide();
+        $(ev).parent('select').parent('td').parent('tr').next('tr').next('tr').show();
+        $(ev).parent('select').parent('td').parent('tr').find('input[type="checkbox"]').each(function () {
+            $(this).prop('checked', false);
+        });
+        $(ev).parent('select').parent('td').parent('tr').find('input[type="hidden"]').each(function () {
+            $(this).val("");
+        });
+        $(ev).parent('select').parent('td').parent('tr').find('.service-select-active').each(function () {
+            $(this).removeClass("service-select-active");
+        });
+
+    }
+</script>
+<!-- / CONTENT -->

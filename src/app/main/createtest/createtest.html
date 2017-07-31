@@ -1,0 +1,962 @@
+<style>
+    .active {
+        border-bottom: 1px solid #808080;
+    }
+
+    .md-checked {
+        color: #69b400;
+    }
+
+    .md-accent.md-raised.md-hue-1.md-button.md-default-theme.md-ink-ripple {
+        height: 42px;
+        margin-top: 6px;
+    }
+
+  .icon-lock-outline {
+        color: #69b400 !important;
+        width: 39px !important;
+    min-width: 45px !important;
+    min-width: 41px !important;
+    margin-top: 9px!important;
+    min-height: 41px !important;
+    line-height: 40px !important;
+    padding: 0px 4px !important;
+    border: 1px solid #69b400;
+    display: inline-block;
+    }
+
+    .md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
+        background-color: #69b400 !important;
+    }
+
+    .md-switch.md-default-theme.md-checked .md-thumb, md-switch.md-checked .md-thumb {
+        background-color: #69b400 !important;
+    }
+
+    .md-radio-button.md-default-theme.md-checked .md-off, md-radio-button.md-checked .md-off {
+        background-color: #69b400 !important;
+    }
+
+    .md-radio-button.md-default-theme .md-on, md-radio-button .md-on {
+        background-color: #69b400 !important;
+    }
+
+    .md-checkbox.md-default-theme.md-checked.md-ink-ripple, md-checkbox.md-checked.md-ink-ripple {
+        color: #69b400 !important;
+    }
+
+    .md-primary.md-hue-1.md-button {
+        height: 44px;
+    }
+
+    .md-raised.md-accent.md-button.md-default-theme.md-ink-ripple {
+        height: 42px;
+    }
+
+    .icon.icon-lock-unlocked-outline.s40 {
+        margin-top: 8px;
+    }
+
+    .md-button {
+        margin: 6px 13px;
+    }
+
+    .answer_WI {
+        color: #69b400 !important;
+    }
+
+    .md-whiteframe_1 {
+        padding: 0px;
+        background-color: #FFF;
+        border: 1px solid #ccc;
+        box-shadow: none;
+    }
+
+        .md-whiteframe_1 .form-title {
+            background-color: #fff;
+            border-bottom: 0 solid #ccc;
+            color: #666666;
+            font-size: 20px;
+            padding: 10px 15px;
+        }
+
+
+    .whiteframe_1_1 {
+        background-color: rgba(0, 0, 0, 0.04);
+        padding: 13px 15px 6px;
+    }
+
+        .whiteframe_1_1 .md-icon-float.md-default-theme.flex {
+            margin: 0;
+            padding: 0;
+        }
+
+            .whiteframe_1_1 .md-icon-float.md-default-theme.flex .md-input {
+                border: none !important;
+            }
+
+    .right_secton {
+        float: right;
+        text-align: right;
+        width: auto;
+    }
+
+        .right_secton .md-primary.md-hue-1.md-button {
+            border-radius: 0;
+            height: auto;
+            margin: 0;
+            min-width: 49px;
+            padding: 0;
+        }
+
+            .right_secton .md-primary.md-hue-1.active.md-button, .right_secton .md-primary.md-hue-1.md-button:hover, .right_secton .md-primary.md-hue-1.md-button:focus {
+                border: 1px solid #69b400;
+                color: #69b400;
+            }
+
+        .right_secton .md-accent.md-raised.md-hue-1.md-button.md-default-theme.md-ink-ripple {
+            color: #fff;
+            height: 36px !important;
+        }
+
+    .whiteframe_1_1 .md-icon-float.md-default-theme.flex {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: 10px;
+    }
+
+     .whiteframe_1_2 {
+    display: inline-block;
+    padding: 22px 17px;
+    width: 100%;
+    padding-top: 51px;
+}
+  
+
+    .whiteframe_1_col1 select {
+        padding: 6px 3px;
+        width: 100%;
+    }
+
+    .whiteframe_1_col1 .input-field {
+        display: inline-block;
+        margin: 0 7px;
+    }
+
+    .whiteframe_1_right {
+        float: right;
+    }
+
+    .whiteframe_1_2 .whiteframe_1_col1 {
+        float: left;
+    }
+
+        .whiteframe_1_2 .whiteframe_1_col1 .icon {
+            border: 1px solid rgba(0, 0, 0, 0.29);
+            display: inline-block;
+            font-size: 20px !important;
+            height: auto !important;
+            line-height: normal !important;
+            margin-top: 0 !important;
+            max-height: inherit !important;
+            min-height: inherit !important;
+            padding: 6.3px 0 6px;
+            position: relative;
+            text-align: center;
+            top: 2px;
+            cursor: pointer;
+        }
+
+    .whiteframe_1_right button {
+        height: 36px !important;
+        margin: 2px 0 0 11px;
+    }
+
+    .whiteframe_1_col1 > span {
+        margin-right: 10px;
+    }
+
+    .whiteframe_1_3 {
+        background-color: rgba(0, 0, 0, 0.04);
+        border-bottom: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        float: left;
+        padding: 15px;
+        width: 100%;
+    }
+
+        .whiteframe_1_3 .input-field {
+            float: left;
+            min-width: 118px;
+            margin-top: 12px;
+        }
+
+            .whiteframe_1_3 .input-field select {
+                padding: 6px 3px;
+                width: 100%;
+            }
+
+        .whiteframe_1_3 .layout-align-start-stretch {
+            float: left;
+            width: auto;
+        }
+
+            .whiteframe_1_3 .layout-align-start-stretch .md-inline-form md-checkbox {
+                margin: 0 10px 0 0;
+            }
+
+        .whiteframe_1_3 md-checkbox .md-label {
+            font-size: 12px;
+        }
+
+        .whiteframe_1_3 md-checkbox .md-icon {
+            width: 17px;
+            height: 17px;
+            top: 3px;
+            left: 8px;
+        }
+
+        .whiteframe_1_3 md-checkbox.md-checked .md-icon:after {
+            height: 10.333px;
+            width: 4.667px;
+            top: 1.222px;
+        }
+
+    .md-inline-form .whiteframe_1_3 md-checkbox {
+        margin: 5px 0 0;
+    }
+
+    .md-inline-form md-radio-group md-radio-button .md-label {
+        font-size: 11px;
+        margin-left: 14px;
+    }
+
+    .whiteframe_1_3 .right_col_ra {
+        /*float: left;*/
+        width: auto;
+    }
+
+        .whiteframe_1_3 .right_col_ra md-radio-button .md-container {
+            top: 15px;
+            left: 5px;
+        }
+
+        .whiteframe_1_3 .right_col_ra md-radio-button .md-off {
+            width: 12px;
+            height: 13px;
+        }
+
+        .whiteframe_1_3 .right_col_ra md-radio-button .md-on {
+            height: 9px;
+            width: 8px;
+            top: 2px;
+            left: 1.5px;
+            color: #69b400 !important;
+        }
+
+    .md-inline-form .whiteframe_1_3 md-radio-group md-radio-button {
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        display: inline-block;
+        height: 25px;
+        line-height: normal;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 0px 6px;
+    }
+
+        .md-inline-form .whiteframe_1_3 md-radio-group md-radio-button .md-label {
+            font-size: 11px;
+            margin-left: 20px;
+            margin-top: 0px;
+            vertical-align: top;
+        }
+
+            .md-inline-form .whiteframe_1_3 md-radio-group md-radio-button .md-label span {
+                border-left: 1px solid #ccc;
+                float: left;
+                padding: 5px 0 5px 5px;
+            }
+
+    .right_col_ra small {
+        font-size: 11px;
+        font-style: italic;
+        margin: 0 8px 0 0;
+    }
+
+    .md-inline-form .whiteframe_1_3 md-radio-group {
+        margin: 0;
+    }
+
+    .whiteframe_1_3 .right_col_ra {
+        float: right;
+        padding-top: 5px;
+        width: auto;
+    }
+
+    .whiteframe_1_3 .layout-align-start-stretch {
+        float: left;
+        margin-left: 19px;
+        width: auto;
+    }
+
+    .whiteframe_1_3 .input-field select {
+        font-size: 13px;
+    }
+
+    .mc_section {
+        float: left;
+        width: 100%;
+        padding: 15px 15px;
+    }
+
+    .mc_section1 .mc_right > span {
+        color: #666666;
+        float: left;
+        font-size: 12px;
+        margin-top: 3px;
+    }
+
+    .mc_section1 .mc_right {
+        position: absolute;
+        right: 0;
+        top: 18px;
+    }
+
+    .mc_right {
+        z-index: 999;
+    }
+
+    .mc_section1 {
+        padding-right: 120px;
+        position: relative;
+    }
+
+    .edit_button {
+        color: red;
+        float: left;
+        margin: 3px 7px;
+    }
+
+    .close_button i {
+        color: #e61610 !important;
+    }
+
+    .mc_section1 a:hover, .mc_section1 a:focus {
+        text-decoration: none;
+    }
+
+    .add-an-answer-col {
+        float: left;
+        width: 100%;
+    }
+
+        .add-an-answer-col .md-icon-float {
+            display: block;
+            float: left;
+            margin: 0;
+            max-width: 100%;
+            min-width: 100%;
+            width: 100%;
+        }
+
+    .add-an-answer-col {
+        display: block;
+        float: left;
+        width: 100%;
+    }
+
+
+    .add_an_ans {
+    clear: both;
+    display: block;
+    float: right;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    padding-bottom: 13px;
+}
+
+        .add_an_ans i.icon {
+            color: #69b400 !important;
+            float: left;
+            line-height: normal;
+        }
+
+        .add_an_ans span {
+            float: left;
+            font-size: 11px;
+            line-height: normal;
+            color: #69b400 !important;
+            margin: 7px 0 5px 9px;
+            text-transform: capitalize;
+        }
+
+    .md-radio-button.md-default-theme.md-checked .md-off, md-radio-button.md-checked .md-off {
+        border-color: #69b400 !important;
+    }
+
+    .md-checkbox.md-default-theme.md-checked .md-icon, md-checkbox.md-checked .md-icon {
+        border-color: #69b400 !important;
+    }
+
+    md-checkbox.md-default-theme.md-checked .md-icon, md-checkbox.md-checked .md-icon {
+        background-color: #69b400;
+    }
+
+    .md-inline-form md-radio-group.radio_col2 md-radio-button .md-label {
+        font-size: 16px;
+        line-height: normal;
+        margin-left: 28px;
+    }
+
+    .md-inline-form md-radio-group.radio_col2 md-radio-button {
+        float: left;
+        width: 100%;
+    }
+
+    .md-inline-form md-radio-group.radio_col2 {
+        float: left;
+        margin: 12px 5px 1px;
+    }
+
+    .mc_section1-lab label {
+        color: #000 !important;
+        font-size: 19px;
+    }
+
+    .choice_col1 {
+        margin: 0;
+        min-height: inherit !important;
+    }
+
+    .mc_section_rept {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .whiteframe_1_3 md-input-container {
+        padding: 0px;
+        margin: 0px 0;
+    }
+
+    .whiteframe_1_2 md-input-container {
+        padding: 0px;
+        margin: 0px 0;
+    }
+    body .whiteframe_1_3 .layout-align-start-stretch {
+        float: right!important;
+    }
+    body .whiteframe_1_3 .right_col_ra {
+    float: left!important;}
+   .form-title.form-titlemain {
+    font-weight: 500 !important;
+}
+    .whiteframe_1_1.whitebackground {
+        background-color: #fff;
+    } 
+    .whiteframe_1_3.whiteframe_1_30 {
+    background-color: rgba(0, 0, 0, 0.04)!important;
+    border-bottom: 1px solid #ccc!important;
+    border-top: 1px solid #ccc!important;
+    float: left!important;
+    padding: 28px 16px 6px!important;
+    width: 100%!important;
+}
+    .md-raised.md-accent.md-button.md-default-theme.md-ink-ripple {
+    height: 42px !important;
+}
+    .right_secton .md-accent.md-raised.md-hue-1.md-button.md-default-theme.md-ink-ripple {
+    height: 42px !important;
+}
+    .right_secton .md-primary.md-hue-1.active.md-button, .right_secton .md-primary.md-hue-1.md-button:hover, .right_secton .md-primary.md-hue-1.md-button:focus {
+    border: 1px solid #69b400;
+    color: #69b400;
+   
+}
+    .right_secton .md-primary.md-hue-1.active.md-button, .right_secton .md-primary.md-hue-1.md-button, .right_secton .md-primary.md-hue-1.md-button {
+        height: 10px;
+        line-height: 10px;
+         padding: 7px;
+          margin-right: 3px;
+            border: 1px solid transparent;
+    }
+    .wdth80 {
+    width: 25%;
+}
+        .wdth80 md-select {
+        width:300px;}
+    .fright {
+    float:right!important;}
+</style>
+<div id="simple-table" class="page-layout simple fullwidth doc-page element-doc-page new_class">
+    <!-- CONTENT -->
+    <div class="content">
+
+        <div class="row">
+            <div class="form-title form-titlemain">Create Test</div>
+            <div class="form-wrapper md-whiteframe-1dp md-whiteframe_1" flex="100">
+                <form name="basicForm" class="md-inline-form" novalidate>
+                    <div>
+                       
+                        <div layout="column" layout-gt-xs="row" class="whiteframe_1_1 whitebackground">
+                            <md-input-container flex>
+                                <input type="text" name="Questitle" ng-model="vm.testtitle"
+                                       placeholder="Test Title"
+                                       required style="font-size: 22px;">
+                                <div ng-messages="basicForm.testtitle.$error"
+                                     role="alert">
+                                    <div ng-message="required">
+                                        <span>Test title is required.</span>
+                                    </div>
+                                </div>
+                            </md-input-container>
+                            <div class="right_secton">
+                                <md-button class="md-primary md-hue-1 {{mcclass}}" ng-click="MCchange()">MC</md-button>
+                                <md-button class="md-primary md-hue-1 {{tfclass}}" ng-click="TFchange()">TF</md-button>
+                                <md-button class="md-primary md-hue-1 {{wiclass}}" ng-click="WIchange()">WI</md-button>
+                                <md-button class="md-accent md-raised md-hue-1" style="background-color:#69b400; " ng-click="savequestionchange()">Add Questions</md-button>
+                            </div>
+                        </div>
+                        <div ng-show="MC" class="mc_section">
+                            <div layout="column" layout-gt-sm="row">
+                                <md-input-container flex="50">
+
+                                    <div class="mc_section1">
+                                        <textarea type="text" name="question" ng-model="vm.question"
+                                                  placeholder="Ask a Question" max-rows="5"
+                                                  required></textarea>
+                                        <div class="mc_right">
+                                            <span>MC</span>
+                                           
+                                            <a href="#" ng-click="close()" class="close_button"><i class="icon icon-close s20"></i></a>
+                                        </div>
+                                    </div>
+                                    <div ng-messages="basicForm.question.$error"
+                                         role="alert">
+                                        <div ng-message="required">
+                                            <span>Question is required.</span>
+                                        </div>
+                                    </div>
+                                </md-input-container>
+                            </div>
+                            <div layout="column" layout-gt-sm="row" class="add-an-answer-col">
+                                <md-input-container flex="50">
+                                    <input type="text" name="WCanswer" ng-model="vm.WCanswer"
+                                           placeholder="Add an Answer" required><md-button class="add_an_ans" ng-disabled="basicForm.WCanswer.$invalid" ng-click="addtolist()"><i class="icon icon-plus-circle "></i> </md-button>
+                                </md-input-container>
+                                
+                            </div>
+                            <md-radio-group ng-model="vm.selectedanswer" ng-change="savequestion()" class="radio_col2">
+                                <md-radio-button ng-repeat="ans in anslist" ng-value="ans"> {{ans}}</md-radio-button>
+                            </md-radio-group>
+                        </div>
+                        <div ng-show="TF" class="mc_section">
+                            <div layout="column" layout-gt-sm="row">
+                                <md-input-container flex="50">
+                                    <div class="mc_section1">
+                                        <textarea type="text" name="question" ng-model="vm.question"
+                                                  placeholder="Ask a Question" md-maxlength="500" max-rows="5"
+                                                  required ng-blur="savequestion()"></textarea>
+                                        <div class="mc_right">
+                                            <span>TF</span>
+                                           
+                                            <a href="#" ng-click="close()" style="cursor:pointer;" class="close_button"><i class="icon icon-close s20"></i></a>
+                                        </div>
+                                    </div>
+                                    <div ng-messages="basicForm.question.$error"
+                                         role="alert">
+                                        <div ng-message="required">
+                                            <span>Question is required.</span>
+                                        </div>
+                                    </div>
+                                </md-input-container>
+                            </div>
+                            <md-list class="offline-switch" flex="20">
+                                <md-list-item>
+                                    <p>{{vm.offline}}</p>
+                                    <md-switch class="md-secondary" ng-model="vm.offline" aria-label="Toggle offline"
+                                               translate-attr-aria-label="FM.TOOGLE_OFFLINE"></md-switch>
+                                </md-list-item>
+                            </md-list>
+                        </div>
+                        <div ng-show="WI" class="mc_section">
+                            <div layout="column" layout-gt-sm="row">
+                                <md-input-container flex="50">
+                                    <div class="mc_section1">
+                                        <textarea type="text" name="question" ng-model="vm.question"
+                                                  placeholder="Ask a Question" md-maxlength="500" max-rows="5"
+                                                  required></textarea>
+                                        <div class="mc_right">
+                                            <span>WI</span>
+                                           
+                                            <a href="#" ng-click="close()" style="cursor:pointer;" class="close_button"><i class="icon icon-close s20"></i></a>
+                                        </div>
+                                    </div>
+                                    <div ng-messages="basicForm.question.$error"
+                                         role="alert">
+                                        <div ng-message="required">
+                                            <span>Question is required.</span>
+                                        </div>
+                                    </div>
+                                </md-input-container>
+                            </div>
+                            <div layout="column" layout-gt-sm="row">
+                                <md-input-container flex="50">
+                                    <textarea type="text" name="answer" ng-model="vm.answer"
+                                              placeholder="Add an Answer" md-maxlength="1000" max-rows="5"
+                                              required ng-blur="savequestion()"></textarea>
+                                    <div ng-messages="basicForm.answer.$error"
+                                         role="alert">
+                                        <div ng-message="required">
+                                            <span>Answer is required.</span>
+                                        </div>
+                                    </div>
+                                </md-input-container>
+                            </div>
+                        </div>
+
+
+                        <div class="whiteframe_1_3 whiteframe_1_30">
+                            <div class="input-field col s12 wdth80">
+
+                                <md-input-container flex>
+                                    <label></label>
+                                    <md-select ng-model="vm.role" required>
+                                        <md-option ng-repeat="job in vm.jobsrole" value="{{job.name}}">
+                                            {{job.name}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                                
+
+                            </div>
+                            <div class="whiteframe_1_col1 fright">
+                                
+                                <div class="input-field col s12">
+                                    <span style="color:#69b400;border: 1px solid #ccc;padding: 7px 9px;border-radius: 2px;margin-right: 8px;">Q: <b>{{questionsansresulttype.length}}</b></span>
+
+                                    <md-input-container flex>
+                                        <label>Timer</label>
+                                        <md-select name="Timer" ng-model="vm.Timer" required>
+                                            <md-option value="1">1 min</md-option>
+                                            <md-option value="2">2 min</md-option>
+                                            <md-option value="3">3 min</md-option>
+                                            <md-option value="4">4 min</md-option>
+                                            <md-option value="5">5 min</md-option>
+                                            <md-option value="6">6 min</md-option>
+                                            <md-option value="7">7 min</md-option>
+                                            <md-option value="8">8 min</md-option>
+                                            <md-option value="9">9 min</md-option>
+                                            <md-option value="10">10 min</md-option>
+                                        </md-select>
+                                    </md-input-container>
+                                </div>
+
+                                <div class="input-field col s12 ">
+                                    <md-input-container flex>
+                                        <label>Attemps</label>
+                                        <md-select name="Attemps" ng-model="vm.Attemps" required>
+                                            <md-option value="1">1</md-option>
+                                            <md-option value="2">2</md-option>
+                                            <md-option value="3">3</md-option>
+                                            <md-option value="4">4</md-option>
+                                            <md-option value="5">5</md-option>
+                                            <md-option value="6">6</md-option>
+                                            <md-option value="7">7</md-option>
+                                            <md-option value="8">8</md-option>
+                                            <md-option value="9">9</md-option>
+                                            <md-option value="10">10</md-option>
+                                        </md-select>
+                                    </md-input-container>
+                                </div>
+                                <form name="passing" class="md-inline-form" novalidate>
+                                    <div class="input-field col s12 " >
+                                        <md-input-container flex style="margin-right:5px !important;">
+                                            <input type="text" name="minpass" ng-model="passpercentage"
+                                                   placeholder="Min Passing percent %"
+                                                   required  >
+                                            <div ng-messages="passing.minpass.$error"
+                                                 role="alert">
+                                                <div ng-message="required">
+                                                    <span>Min Passing percent is required.</span>
+                                                </div>
+                                            </div>
+                                        </md-input-container>
+                                        <i class="{{icon}}" ng-click="lockunlock()"></i>
+                                    </div>
+                                </form>
+                               
+                            </div>
+
+                        </div>
+
+
+
+                        <!--222-->
+                        <div class="whiteframe_1_3">
+                            <div class="right_col_ra">
+
+                                <!--<md-radio-group ng-model="WebPages" class="radio_cols">
+                <md-radio-button value="WebPages" onclick="enableall('WebPagesenable');"> <span>Web Pages</span></md-radio-button>
+            </md-radio-group>-->
+                                <md-checkbox type="checkbox" onclick="enableall('WebPagesenable');" ng-model="WebPages">Web Pages</md-checkbox>
+                            </div>
+                            <div layout="row" layout-align="start" id="WebPagesenable">
+                                <md-checkbox type="checkbox" disabled="true" ng-model="WebPagesGENERAL">GENERAL</md-checkbox>
+                                <md-checkbox type="checkbox" disabled="true" ng-model="WebPagesEXPERT">EXPERT</md-checkbox>
+                                <md-checkbox type="checkbox" disabled="true" ng-model="WebPagesAUTHORITY">AUTHORITY</md-checkbox>
+                                <md-checkbox type="checkbox" disabled="true" ng-model="WebPagesOTHER">OTHER</md-checkbox>
+                            </div>
+
+
+                        </div>
+                        <!--222-->
+                        <!--333-->
+                        <div class="whiteframe_1_3">
+                            <div class="right_col_ra">
+
+                                <!--<md-radio-group ng-model="Blogs" class="radio_cols">
+                <md-radio-button value="Blogs" onclick="enableall('Blogs');"><span>Blogs</span></md-radio-button>
+
+            </md-radio-group>-->
+                                <md-checkbox type="checkbox" onclick="enableall('Blogs');" ng-model="Blogs">Blogs</md-checkbox>
+                            </div>
+                            <div layout="row" layout-align="start" id="Blogs">
+                                <md-checkbox type="checkbox" disabled="true" ng-model="BlogsGENERAL">GENERAL</md-checkbox>
+                                <md-checkbox type="checkbox" disabled="true" ng-model="BlogsEXPERT">EXPERT</md-checkbox>
+                                <md-checkbox type="checkbox" disabled="true" ng-model="BlogsAUTHORITY">AUTHORITY</md-checkbox>
+                                <md-checkbox type="checkbox" disabled="true" ng-model="BlogsOTHER">OTHER</md-checkbox>
+                            </div>
+
+
+                        </div>
+                        <!--333-->
+                        <!--444-->
+                        <div class="whiteframe_1_3">
+                            <div class="right_col_ra">
+
+                                <!--<md-radio-group ng-model="Articles" class="radio_cols">
+
+                <md-radio-button value="Articles" onclick="enableall('Articles');"><span>Articles</span></md-radio-button>
+
+            </md-radio-group>-->
+                                <md-checkbox type="checkbox" onclick="enableall('Articles');" ng-model="Articles">Articles</md-checkbox>
+                            </div>
+
+                            <div layout="row" layout-align="start" id="Articles">
+                                <md-checkbox type="checkbox" disabled="true" ng-model="ArticlesGENERAL">GENERAL</md-checkbox>
+                                <md-checkbox type="checkbox" disabled="true" ng-model="ArticlesEXPERT">EXPERT</md-checkbox>
+                                <md-checkbox type="checkbox" disabled="true" ng-model="ArticlesAUTHORITY">AUTHORITY</md-checkbox>
+                                <md-checkbox type="checkbox" disabled="true" ng-model="ArticlesOTHER">OTHER</md-checkbox>
+                            </div>
+
+                        </div>
+                        <!--444-->
+                        <!--1111-->
+                        <div class="whiteframe_1_3">
+                            <div class="right_col_ra">
+
+                                <!--<md-radio-group ng-model="LandingPages" class="radio_cols">
+                <md-radio-button value="LandingPages" onclick="enableall('LandingPages');"><span>Landing Pages</span></md-radio-button>
+            </md-radio-group>-->
+                                <md-checkbox type="checkbox" onclick="enableall('LandingPages');" ng-model="LandingPages">Landing Pages</md-checkbox>
+                            </div>
+                            <div layout="row" layout-align="start" id="LandingPages">
+                                <md-checkbox type="checkbox" disabled="true" ng-model="LandingPagesGENERAL">GENERAL</md-checkbox>
+                                <md-checkbox type="checkbox" disabled="true" ng-model="LandingPagesEXPERT">EXPERT</md-checkbox>
+                                <md-checkbox type="checkbox" disabled="true" ng-model="LandingPagesAUTHORITY">AUTHORITY</md-checkbox>
+                                <md-checkbox type="checkbox" disabled="true" ng-model="LandingPagesOTHER">OTHER</md-checkbox>
+                            </div>
+                        </div>
+
+
+
+                        <div ng-repeat="option in questionsansresulttype">
+
+                            <div ng-if="option.type=='TF'" class="mc_section_01 mc_section_03">
+                                <div layout="column" layout-gt-sm="row">
+                                 
+                                      
+                                            <label id="lb{{$index+1}}">{{$index+1}}. {{option.Qtitle}}</label>
+                                            <p style="display:none" id="p{{$index+1}}">
+                                                <input type="text" ng-model="option.Qtitle" style="border: 1px solid #ccc!important;width: 27%!important;" />
+                                                <a onclick="editid(this)" class="edit_button" style="cursor:pointer;"><i class="icon icon-content-save s20"></i></a>
+                                                <input type="hidden" value="{{$index+1}}" />
+                                            </p>
+
+
+                                            <div class="mc_right"> 
+                                                <span>{{option.type}}</span>
+                                                <a onclick="changeidit(this)" class="edit_button" style="cursor:pointer;"><i class="icon icon-border-color s20"></i></a>
+                                                <input type="hidden" value="{{$index+1}}" />
+                                                <a href="#" ng-click="remove(option)" style="cursor:pointer;" class="close_button"><i class="icon icon-close s20"></i></a>
+                                            </div>
+                                       
+                                  
+                                </div>
+                                <div layout="column" layout-gt-sm="row" style="padding-left: 24px;">
+                                    <md-input-container flex="50" class="choice_col1">
+                                        <md-list class="offline-switch offline-switch05" flex="20">
+                                            <md-list-item>
+                                                <p>{{option.answer}}</p>
+                                                <md-switch class="md-secondary" ng-model="option.answer" aria-label="Toggle offline"
+                                                           translate-attr-aria-label="FM.TOOGLE_OFFLINE"></md-switch>
+
+                                            </md-list-item>
+                                        </md-list>
+                                    </md-input-container>
+
+                                </div>
+                            </div>
+                            <div ng-if="option.type=='WI'" class="mc_section_01 mc_section_03">
+                                <div layout="column" layout-gt-sm="row">
+
+                                
+                                      
+
+                                            <label id="lb{{$index+1}}">{{$index+1}}. {{option.Qtitle}}</label>
+                                            <p style="display:none" id="p{{$index+1}}">
+                                                <input type="text" ng-model="option.Qtitle" style="border: 1px solid #ccc!important;width: 27%!important;" />
+                                                <a onclick="editTF(this)" class="edit_button"><i class="icon icon-content-save s20"></i></a>
+                                                <input type="hidden" value="{{$index+1}}" />
+                                            </p>
+                                            <div class="mc_right">
+                                                <span>{{option.type}}</span>
+                                                <a onclick="changeTF(this)" class="edit_button"><i class="icon icon-border-color s20"></i></a>
+                                                <input type="hidden" value="{{$index+1}}" />
+
+                                                <a href="#" ng-click="remove(option)" class="close_button"><i class="icon icon-close s20"></i></a>
+                                            </div>
+                                     
+                                 
+                                </div>
+                                <div layout="column" layout-gt-sm="row">
+                                   
+                                        <label id="lba{{$index+1}}" class="answer_WI"><b>{{option.answer}}</b></label>
+                                        <p style="display:none" id="pa{{$index+1}}">
+                                            <input type="text" ng-model="option.answer" style="border: 1px solid #ccc!important;width: 24%!important;" />
+
+                                        </p>
+                                  
+
+                                </div>
+                            </div>
+
+                            <div ng-if="option.type=='MC'" class="mc_section_01 mc_section_02">
+                                <div layout="column" layout-gt-sm="row">
+                                    
+
+                                       
+                                            <label id="lb{{$index+1}}">{{$index+1}}. {{option.Qtitle}}</label>
+                                            <p style="display:none" id="p{{$index+1}}">
+                                                <input type="text" ng-model="option.Qtitle" style="border: 1px solid #ccc!important;width: 27%!important;" />
+                                                <a onclick="editMC(this)" class="edit_button"><i class="icon icon-content-save s20"></i></a>
+                                                <input type="hidden" value="{{$index+1}}" />
+                                            </p>
+                                            <div class="mc_right">
+                                                <span>{{option.type}}</span>
+                                                <a onclick="changeMC(this)" class="edit_button"><i class="icon icon-border-color s20"></i></a>
+                                                <input type="hidden" value="{{$index+1}}" />
+
+                                                <a href="#" ng-click="remove(option)" class="close_button"><i class="icon icon-close s20"></i></a>
+                                            </div>
+                                        
+                                  
+                                </div>
+
+                                <md-radio-group ng-model="option.answer" class="radio_col2" style="padding-left: 21px;">
+
+                                    <md-radio-button ng-repeat="ans in option.options" ng-if="ans.value!=undefined" ng-value="ans.value"> {{ans.value}}</md-radio-button>
+
+
+                                </md-radio-group>
+
+                            </div>
+
+
+                        </div>
+
+
+                       
+                        <!--1111-->
+                        <div layout="column" layout-gt-xs="row" class="whiteframe_1_2">
+                            <div class="whiteframe_1_right">
+                                <md-button class="md-raised md-accent graybg" aria-label="Cancel"
+                                           ng-click="cancel()">
+                                    Cancel
+                                </md-button>
+                                <md-button type="submit" class="md-raised md-accent" aria-label="Submit"
+                                           ng-disabled="basicForm.role.$pristine || basicForm.Attemps.$pristine || basicForm.Timer.$pristine || basicForm.role.$pristine || basicForm.Questitle.$invalid
+                                           || passing.minpass.$pristine || passing.minpass.$invalid" ng-click="publishtest()">
+                                    Publish Test
+                                </md-button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- / CONTENT -->
+</div>
+<script>
+    function changeidit(ev) {
+        var id = $(ev).next('input[type=hidden]').val();
+        $('#lb' + id).hide();
+        $('#p' + id).show();
+    }
+    function editid(ev) {
+        var id = $(ev).next('input[type=hidden]').val();
+        $('#lb' + id).show();
+        $('#p' + id).hide();
+    }
+    function changeTF(ev) {
+        var id = $(ev).next('input[type=hidden]').val();
+        $('#lb' + id).hide();
+        $('#lba' + id).hide();
+        $('#p' + id).show();
+        $('#pa' + id).show();
+    }
+    function editTF(ev) {
+        var id = $(ev).next('input[type=hidden]').val();
+        $('#lb' + id).show();
+        $('#lba' + id).show();
+        $('#p' + id).hide();
+        $('#pa' + id).hide();
+    }
+    function changeMC(ev) {
+        var id = $(ev).next('input[type=hidden]').val();
+        $('#lb' + id).hide();
+        $('#p' + id).show();
+    }
+    function editMC(ev) {
+        var id = $(ev).next('input[type=hidden]').val();
+        $('#lb' + id).show();
+        $('#p' + id).hide();
+    }
+</script>
+<script>
+    // $('a[href$="/Tests"]').addClass("active md-accent-bg");
+    $(document).ready(function () {
+        $('.ms-navigation-item').find('a').each(function () {
+
+            if ($(this).attr('href') == '/Tests') {
+                $(this).addClass("active md-accent-bg");
+            }
+        });
+    });
+    function enableall(id) {
+        $('#' + id).find('md-checkbox').each(function () {
+            if ($(this).attr('disabled') == 'disabled') {
+                $(this).removeAttr('disabled');
+            }
+            else {
+                //$(this).removeAttr('disabled');
+                $(this).removeAttr("checked");
+                $(this).attr("disabled", "disabled");
+            }
+        });
+    }
+</script>

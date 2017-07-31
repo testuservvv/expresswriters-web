@@ -1,0 +1,76 @@
+
+<md-dialog aria-label="Mango (Fruit)" class="assign-modal">
+    <form ng-cloak>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Reopen Tasks</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon md-svg-src="assets/angular-material-assets/img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <h2>Reopen All</h2>
+                <!--<input type="text" ng-model="serachtask" style="border: 1px solid #ccc;padding: 9px;" placeholder="Search Task..." />-->
+                <p>
+                    <table cellspacing="0" cellpadding="0">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" ng-click="toggleAll()" ng-model="isAllSelected">Select all
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="task in tasks | filter: serachtask">
+                                <td>
+                                    <input type="checkbox" name="selectedTasks[]" value="{{task.name}}" ng-model="task.selected" ng-change="optionToggled()" />
+
+                                    {{task.name}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </p>
+                <p>
+                    <span>1 of {{tasks.length}}</span>
+                </p>
+                <p>
+                    <md-input-container flex>
+                        <label>Choose Reason</label>
+                        <md-select ng-model="selectedreason" required>
+                            <md-option ng-repeat="reason in reasons" value="{{reason.name}}">
+                                {{reason.name}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                </p>
+                <p>
+                    <md-input-container class="md-block" flex="70">
+
+                        <textarea ng-model="selecteddesc" md-maxlength="1000" name="Description" max-rows="10" required
+                                  placeholder="Please leave detailed feedback."></textarea>
+                        <div ng-messages="basicForm.Description.$error"
+                             role="alert">
+                            <div ng-message="required">
+                                <span>Job Description is required.</span>
+                            </div>
+                        </div>
+                    </md-input-container>
+                </p>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+
+            <span flex></span>
+            <md-button ng-click="cancel()">
+                Cancel
+            </md-button>
+            <md-button ng-click="answer()">
+                Confirm
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

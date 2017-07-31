@@ -1,0 +1,407 @@
+<style>
+            .active {
+                border-bottom: 1px solid #808080;
+                 font-weight: bold;
+            }
+        .dataTables_wrapper .top {
+        padding: 0;
+    }
+            .w100p {
+                width: 100%;
+            }
+
+            .pull-left {
+                float: left;
+            }
+
+            .pull-right {
+                float: right;
+            }
+
+            .left_col {
+                width: 22%;
+            }
+
+                .left_col md-input-container {
+                    display: block;
+                    flex: 0 1 0;
+                    float: left;
+                    margin: 0;
+                    max-width: 100%;
+                    width: 100%;
+                }
+
+                    .left_col md-input-container .md-select-value {
+                        min-height: 36px;
+                    }
+
+            .layout-row.w100p {
+                display: block;
+                width: 100%;
+            }
+
+            .left_col .md-button {
+                border-radius: 0;
+            }
+
+            .left_col .active.md-button {
+            }
+            /*.left_col {
+                text-align: right;
+                width: 40%;
+            }*/
+
+            .dataTable01 td{word-break:break-all;white-space:normal;word-wrap:break-word;font-size:11px;}
+            .result {
+                background-color: #A3B400;
+                color: #FFF;
+                padding: 0px 7px;
+                text-align: center;
+                margin: 0 5px 0 0;
+                float: left;
+            }
+            .resultf {
+                background-color: #E61610;
+                color: #FFF;
+                padding: 0px 7px;
+                text-align: center;
+                margin: 0 5px 0 0;
+                float: left;
+            }
+
+            .md-button.md-default-theme.md-ink-ripple {
+            padding-top: 8px;
+            text-align: center;
+        }
+
+            .center_table tr th:nth-child(1), .center_table tr th:nth-child(2), .center_table  tr th:nth-child(3),.center_table tr th:nth-child(4),.center_table tr th:nth-child(5){text-align:center;}
+             .center_table tr th, .center_table tr td{text-align:center!important;}
+
+            table.dataTable {
+      border-spacing: 0;
+      clear: both;
+      margin: 0 auto;
+      width: 100%;
+    }
+            table.dataTable.dtr-inline.collapsed.dtr-inline.collapsed > tbody > tr > td:first-child, table.dataTable.dtr-inline.collapsed.dtr-inline.collapsed > tbody > tr > th:first-child {
+      padding-left: 23px;
+    }
+            .icon.icon-account-circle.s30 {
+      vertical-align: middle;
+    }
+
+        table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child::before, table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child::before {
+        display:none;}
+            td > span {
+        display: inline-block;
+        line-height: 19px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 68px;
+    }
+            td {
+      width: 58px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+               .input-new {
+        border: 1px solid #ddd !important;
+        padding: 9px!important;
+    }
+                         .user_col{width: 38%;}
+    .user_col .left_col {
+        margin-left: 24px;
+        width: 46%;
+    }
+
+          #tableservice td, #tableservice th {
+        text-align: center;
+    }
+          .min_top_section > button:first-child {
+        margin-right: 20px;
+    }
+           #tableservice_length select {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 9px;
+        padding: 6px;
+    }
+   .right-section {
+    right: 0px;
+    top: 41px;
+}
+    .Manualpaggingbyorder {
+    background:#FCFCFC; padding:21px 10px;}
+</style>
+<div id="simple-table" class="page-layout simple fullwidth doc-page element-doc-page">
+    <!-- CONTENT -->
+    <div class="content">
+        <div class="content layout-column">
+            <div class="md-title pb-0 padding-left-10">
+                Orders
+            </div>
+            <div class="widget-group order-item-listing" layout="row" flex="100" layout-wrap>
+                <ms-widget flippable="false" layout="row" flex="100" flex-gt-md="100">
+                    <!-- Front -->
+                    <ms-widget-front class="white-bg">
+                        <div class="ph-16 pv-30 border-bottom gray-bg">
+                            <div layout="column" layout-gt-xs="row">
+                                <div class="layout-row w100p min_top_section">
+                                    <div class="profile-link">
+                                        <span class="client-name-list new-breadcrum">
+                                            <ul>
+                                                <li style="cursor:pointer;" ng-click="vm.goback()">Orders</li>
+                                                <li style="cursor:pointer;" ng-click="vm.itemlisting()">{{vm.username}} </li>
+                                                <li>{{vm.orderid}}</li>
+                                            </ul>
+                                        </span>
+                                    </div>
+                                    <div class="right-section inprogress">
+                                        <span style="float:left">In Progress</span>
+                                        <span> <md-progress-linear md-mode="determinate" value="{{vm.getpercentage(vm.filteredTodos)}}"></md-progress-linear>{{vm.getpercentage(vm.filteredTodos)}}%</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ph-16 pv-30 border-bottom gray-bg" layout="row" layout-align="space-between center">
+                            <div layout="row" layout-align="start center" class="user_col filter-list filter-list-1">
+                                <div class="list-btn new-list">
+                                    <md-input-container>
+                                        <label>Actions</label>
+                                        <md-select ng-model="">
+                                            <md-option ng-if="vm.unassignedtab" value="Completed" ng-click="vm.change('Unassigned')">Unassigned</md-option>
+                                            <md-option ng-if="vm.reassignedtab" value="History" ng-click="vm.change('Reassigned')">Reassigned</md-option>
+                                            <md-option ng-if="vm.assignedtab" value="Frozen" ng-click="vm.change('Assigned')">Assigned</md-option>
+                                            <md-option ng-if="vm.latetab" value="Trash" ng-click="vm.change('Late')">Late</md-option>
+                                            <md-option ng-if="vm.workingtab" value="Working" ng-click="vm.change('Working')">Working</md-option>
+                                            <md-option ng-if="vm.editorialtab" value="Editorial" ng-click="vm.change('Editorial')">Editorial</md-option>
+                                            <md-option ng-if="vm.senttab" value="Sent" ng-click="vm.change('Sent')">Sent</md-option>
+                                            <md-option ng-if="vm.approvedtab" value="Approved" ng-click="vm.change('Approved')">Approved</md-option>
+                                            <md-option ng-if="vm.revisiontab" value="Revision" ng-click="vm.change('Revision')">Revision</md-option>
+                                            <md-option ng-if="vm.cancelledtab" value="Cancelled" ng-click="vm.change('Cancelled')">Cancelled</md-option>
+                                            <md-option ng-if="vm.pausedtab" value="Paused" ng-click="vm.change('Paused')">Paused</md-option>
+                                        </md-select>
+                                    </md-input-container>
+                                    <md-button class="mrgin-left {{vm.activeclassall}}" ng-click="vm.all()">All</md-button>
+                                    <md-button class="{{vm.activeclassunass}}" ng-click="vm.getlist('Unassigned')">Unassigned</md-button>
+                                    <md-button class="{{vm.activeclassreass}}" ng-click="vm.getlist('Reassigned')">Reassigned</md-button>
+                                    <md-button class=" {{vm.activeclassass}} " ng-click="vm.getlist('Assigned')">Assigned</md-button>
+                                    <md-button class=" {{vm.activeclasslate}} " ng-click="vm.getlist('Late')">Late</md-button>
+                                    <md-button class=" {{vm.activeclasswor}} " ng-click="vm.getlist('Working')">Working</md-button>
+                                    <md-button class="{{vm.activeclassedi}}" ng-click="vm.getlist('Editorial')">Editorial</md-button>
+                                    <md-button class=" {{vm.activeclasssen}} " ng-click="vm.getlist('Sent')">Sent</md-button>
+                                    <md-button class=" {{vm.activeclassapp}} " ng-click="vm.getlist('Approved')">Approved</md-button>
+                                    <md-button class=" {{vm.activeclassrev}} " ng-click="vm.getlist('Revision')">Revision</md-button>
+                                    <md-button class=" {{vm.activeclasscan}} " ng-click="vm.getlist('Cancelled')">Cancelled</md-button>
+                                    <md-button class=" {{vm.activeclasspau}} " ng-click="vm.getlist('Paused')">Paused</md-button>
+                                </div>
+                            </div>
+                            <div class="refresh_col">
+                                <input type="text" ng-model="vm.search" placeholder="Order Task Search ..." class="input-new" />
+                            </div>
+                        </div>
+                        <table class="dataTable dataTable01 row-border hover center_table" datatable="ng"
+                               dt-options="vm.widget7.dtOptions" id="tableservice">
+                            <thead>
+                                <tr>
+                                    <th class="secondary-text" style="text-align:left !important;">
+                                        <div class="table-header">
+                                            <input type='checkbox' value="" id="select_all" onclick="checkall();">
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text" style="text-align:left !important;">
+                                        <div class="table-header">
+                                            <span class="column-title ng-binding">#Item/Tasks</span>
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text" style="text-align:left !important;">
+                                        <div class="table-header">
+                                            <span class="column-title">Project Title</span>
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text" style="text-align:left !important;">
+                                        <div class="table-header">
+                                            <span class="column-title">Service Type</span>
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text" style="text-align:left !important;">
+                                        <div class="table-header">
+                                            <span class="column-title">Amount</span>
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text" style="text-align:left !important;">
+                                        <div class="table-header">
+                                            <span class="column-title">Members Assigned</span>
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text" style="text-align:left !important;">
+                                        <div class="table-header">
+                                            <span class="column-title">DUE</span>
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text" style="text-align:center !important;">
+                                        <div class="table-header">
+                                            <span class="column-title">Status</span>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="row in vm.filteredTodos | filter:vm.search | filter:{status:vm.filterlistname}">
+                                    <td class="sorting_1" style="text-align:left !important;">
+                                        <input type='checkbox' class="checkbox" value="{{row._id}}">
+                                        <input type="hidden" id="selectedids" />
+                                    </td>
+                                    <td class="sorting_1 client-show-id" ng-click="vm.showallordersbyclientid(row._id,$index+1)" style="text-align:left !important;">
+                                        <span>
+                                            #{{$index+1}}/{{row.totaltasks}}
+                                        </span>
+                                    </td>
+                                    <td class="sorting_1 " style="text-align:left !important;">
+                                        <span class="bold" style="text-wrap:inherit;">
+                                            {{row.name}}
+                                        </span>
+                                    </td>
+                                    <td class="sorting_1" style="text-align:left !important;">
+                                        <span class="bold" style="text-wrap:inherit;">
+                                            {{row.servicetype}}
+                                        </span>
+                                    </td>
+                                    <td class="sorting_1">
+                                        <span class="bold" style="text-wrap:inherit;">
+                                            ${{row.amount}}
+                                        </span>
+                                    </td>
+                                    <td class="sorting_1" style="text-align:left !important;">
+                                        <span class="bold" style="text-wrap:inherit;" ng-repeat="member in row.memberassign" ng-if="row.memberassign">
+                                            {{member.name}}<font ng-show="!$last">,</font>
+                                        </span>
+                                        <span class="bold" style="text-wrap:inherit;" ng-if="row.memberassign.length==0">
+                                            -
+                                        </span>
+                                    </td>
+                                    <td class="sorting_1 conditional-span" style="text-align:left !important;">
+                                        <span class="bold" style="text-wrap:inherit;" ng-if="row.status=='Unassigned'">
+                                            none
+                                        </span>
+                                        <span class="bold" style="text-wrap:inherit;" ng-if="row.duedate >= vm.today.toJSON() && row.status!='Approved'">
+                                            {{row.duedate | date:'M/d/yy hh:mm'}}
+                                        </span>
+                                        <span class="bold" style="text-wrap:inherit;color:red;" ng-if="row.duedate<vm.today.toJSON() && row.status!='Approved'">
+                                            {{row.duedate | date:'M/d/yy hh:mm'}}
+                                        </span>
+                                    </td>
+                                    <td class="sorting_1">
+                                        <span class="yellow" ng-if="row.status=='Unassigned'">
+                                            Un
+                                        </span>
+                                        <span class="yellow purple" ng-if="row.status=='Editorial'">
+                                            Ed
+                                        </span>
+                                        <span class="yellow green" ng-if="row.status=='Approved'">
+                                            <i class="icon icon-check s10" style="color:#fff;"></i>
+                                        </span>
+                                        <span class="yellow green" ng-if="row.status=='Working'">
+                                            Wo
+                                        </span>
+                                        <span class="yellow orange" ng-if="row.status=='Paused'">
+                                            Pa
+                                        </span>
+                                        <span class="yellow red" ng-if="row.status=='Reassigned'">
+                                            Re
+                                        </span>
+                                        <span class="yellow gray" ng-if="row.status=='Sent'">
+                                            Se
+                                        </span>
+                                        <span class="yellow blue" ng-if="row.status=='Assigned'">
+                                            As
+                                        </span>
+                                        <span class="yellow red" ng-if="row.status=='Revision'">
+                                            Rv
+                                        </span>
+                                        <span class="yellow gray" ng-if="row.status=='Cancelled'">
+                                            Ca
+                                        </span>
+                                        <span class="yellow red" ng-if="row.status=='Late'">
+                                            La
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="Manualpaggingbyorder">
+                            <div class="btn-nxt">
+                                <span>{{vm.currentitem+1}} of {{vm.totalids.length}} orders</span>
+
+                                <md-button ng-disabled="vm.prev" title="Previous" class="button button01" ng-click="vm.prevrecord()">Prev</md-button>
+                                <md-button ng-disabled="vm.next" title="Next" class="button button01" ng-click="vm.nextrecord()">Next</md-button>
+                            </div>
+                        </div>
+                    </ms-widget-front>
+
+                    <!-- / Front -->
+                </ms-widget>
+                <!-- / WIDGET 7 -->
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+
+        $('.ms-navigation-item').find('a').each(function () {
+            if ($(this).attr('href') == '/Orders') {
+                $(this).addClass("active md-accent-bg");
+                //$(this).parent('div').parent('li').parent('ul').css("display", "block");
+
+            }
+        });
+    });
+
+    function checkall() {
+
+        var select_all = document.getElementById("select_all"); //select all checkbox
+        var checkboxes = document.getElementsByClassName("checkbox"); //checkbox items
+
+        //select all checkboxes
+        select_all.addEventListener("change", function (e) {
+            for (i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = select_all.checked;
+            }
+        });
+
+
+        for (var i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].addEventListener('change', function (e) { //".checkbox" change
+                //uncheck "select all", if one of the listed checkbox item is unchecked
+                if (this.checked == false) {
+                    select_all.checked = false;
+
+                }
+                //check "select all" if all checkbox items are checked
+                if (document.querySelectorAll('.checkbox:checked').length == checkboxes.length) {
+                    select_all.checked = true;
+
+                }
+            });
+        }
+
+    }
+    function addids() {
+
+        var selectedValues = "";
+        $('#tableservice').find('input[type="checkbox"]:checked').each(function () {
+            selectedValues += "," + $(this).val();
+        });
+
+        //selectedValues = selectedValues.substring(1);
+        $('#selectedids').val(selectedValues);
+
+    }
+</script>
+<!-- / CONTENT -->

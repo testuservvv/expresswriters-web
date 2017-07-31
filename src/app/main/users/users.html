@@ -1,0 +1,360 @@
+<style>
+        .active {
+        border-bottom:1px solid #808080;
+        font-weight: bold;
+        }
+         .w100p {
+        width: 100%;
+    }
+         .dataTables_wrapper .top {
+        padding: 0;
+    }
+        .pull-left{float:left; margin-left: 9px;}
+        .pull-right{float:right;}
+        .left_col {
+        width: 22%;
+    }
+    .left_col md-input-container {
+        display: block;
+        flex: 0 1 0;
+        float: left;
+        margin: 0;
+        max-width: 100%;
+        width: 59%;
+    }
+
+    .left_col md-input-container .md-select-value{min-height: 36px;}
+
+    .layout-row.w100p {
+        display: block;
+        margin-left: 7px;
+        width: 100%;
+    }
+
+    .left_col  .md-button{border-radius: 0;}
+    .left_col .active.md-button{}
+    /*.left_col {
+        text-align: right;
+        width: 40%;
+    }*/
+       table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child::before, table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child::before {
+        display:none;}
+            td > span {
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100px;
+    }
+            td {
+      width: 58px;
+     
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+        .md-button.new-btn {
+        min-width:76px !important; font-size:13px!important; text-transform:capitalize!important;}
+        .input-new {
+        border: 1px solid #ddd !important;
+        padding: 9px!important;
+    }
+
+        #menu_container_16 md-menu-content {
+        min-width: 57px;
+        width: 57px;
+    }
+         #menu_container_16 md-menu-content .md-button{ min-height: inherit;
+        min-width: inherit; }
+
+         .user_col{width: 38%;}
+    .user_col .left_col {
+        margin-left: 33px;
+        width: 67%;
+    }
+
+          #tableservice td, #tableservice th {
+        text-align: center;
+    }
+           #tableservice_length select {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 9px;
+        padding: 6px;
+    }
+               .ml-16.text-boxed.pink-bg.white-fg.ng-binding {
+        margin-left: 10px;
+    }
+               .statis{
+
+      margin-top: 0!important;
+    }
+</style>
+<div id="simple-table" class="page-layout simple fullwidth doc-page element-doc-page">
+    <!-- CONTENT -->
+    <div class="content">
+        <div class="content layout-column">
+            <div class="md-title pb-0 padding-left-10">
+                Users
+            </div>
+            <div class="widget-group" layout="row" flex="100" layout-wrap>
+
+                <!-- WIDGET 7 -->
+                <ms-widget flippable="false" layout="row" flex="100" flex-gt-md="100">
+                    <!-- Front -->
+                    <ms-widget-front class="white-bg">
+
+                        <div class="ph-16 pv-30 border-bottom gray-bg">
+                            <div layout="column" layout-gt-xs="row">
+                                <div class="layout-row w100p min_top_section">
+                                    <md-button class="md-raised md-accent statis" aria-label="Cancel"
+                                               ng-click="createUser()" style="margin-right: 21px;">
+                                        ADD USER
+                                    </md-button>
+
+                                    
+                                    <div class="right_col pull-right small-navigation">
+                                        <md-button class="{{activeclassact}} new-btn" ng-click="activelist()"> Active  </md-button>
+                                        <md-button class="padding-left-5 {{activeclasssus}} new-btn" ng-click="suspendedlist()">Suspended   </md-button>
+                                        <md-button class="padding-left-5 {{activeclassrem}} new-btn" ng-click="removedlist()">Removed</md-button>
+                                        
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ph-16 pv-30 border-bottom gray-bg">
+                            <div layout="column" layout-gt-xs="row">
+                                <div class="layout-row w100p min_top_section">
+                                    <div class="right_col pull-right small-navigation">
+
+                                        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap class="btn-text">
+                                            <md-button class="md-raised new-btn" ng-disabled="Admin" ng-click="adminusers()">Admins</md-button>
+                                            <md-button class="md-raised new-btn" ng-disabled="Manager" ng-click="managerusers()">Managers</md-button>
+                                            <md-button class="md-raised new-btn" ng-disabled="Assistant" ng-click="assistantusers()">Assistants</md-button>
+                                            <md-button class="md-raised new-btn" ng-disabled="Editor" ng-click="editorusers()">Editors</md-button>
+                                            <md-button class="md-raised new-btn" ng-disabled="Writer" ng-click="writerusers()">Writers</md-button>
+                                            <md-button class="md-raised new-btn" ng-disabled="Applicant" ng-click="applicantusers()">Applicants</md-button>
+                                            <md-button class="md-raised new-btn" ng-disabled="Custom" ng-click="customusers()">Custom</md-button>
+                                            <md-button class="md-raised new-btn" ng-disabled="Sales" ng-click="salesusers()">Sales</md-button>
+                                        
+
+                                        </section>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="ph-16 pv-30 border-bottom gray-bg" ng-show="vm.socialshow">
+                            <div layout="column" layout-gt-xs="row">
+                                <div class="layout-row w100p min_top_section">
+                                    <div class="right_col pull-right small-navigation">
+
+                                        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap class="btn-text">
+                                           
+                                            <md-button class="md-raised new-btn" ng-disabled="SMM" ng-click="smm()">Social Media Managers</md-button>
+
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="ph-16 pv-24 border-bottom" layout="row" layout-align="space-between center">
+                            <div layout="row" layout-align=" start center" class="user_col">
+
+                                <span class="ml-16 text-boxed pink-bg white-fg">{{vm.filteredTodos.length}} Users</span>
+                                <div class="left_col">
+                                    <md-input-container>
+                                        <label>Actions</label>
+                                        <md-select ng-model="">
+                                            <md-option value="Listed" onclick="addids();" ng-show="activeshow" ng-click="Activeuser()">Activate User</md-option>
+                                            <md-option value="Draft" onclick="addids();" ng-show="suspendedshow" ng-click="Suspendeduser()">Suspend User</md-option>
+                                            <md-option value="Trash" onclick="addids();" ng-show="removeshow" ng-click="Removeduser()">Remove User</md-option>
+                                        </md-select>
+                                    </md-input-container>
+
+                                </div>
+                            </div>
+                            <div class="refresh_col">
+                                <md-menu>
+                                    <md-button aria-label="more" class="md-icon-button"
+                                               ng-click="$mdOpenMenu($event)">
+                                        <md-icon md-font-icon="icon-dots-vertical"></md-icon>
+                                    </md-button>
+
+                                    <md-menu-content width="2">
+                                        <md-menu-item>
+                                            <md-button ng-click="refreshWidget()" aria-label="Refresh widget">
+                                                <i class="icon icon-refresh"></i>
+                                            </md-button>
+                                        </md-menu-item>
+                                    </md-menu-content>
+                                </md-menu>
+                                <input type="text" ng-model="search" placeholder="Search." class="input-new" />
+                            </div>
+                        </div>
+
+                        <table class="dataTable row-border hover" datatable="ng"
+                               dt-options="vm.widget7.dtOptions" id="tableservice">
+                            <thead>
+                                <tr>
+                                    <th class="secondary-text" style="text-align: left !important;">
+                                        <div class="table-header" style="width: 51px !important;margin: 0px !important; padding: 0px !important;">
+                                            <input type='checkbox' value="" id="select_all" onclick="checkall();">
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text" style="text-align: left !important; width:50px!important ;">
+                                        <div class="table-header" style="width: 51px !important;margin: 0px !important; padding: 0px !important;">
+                                            <span class="column-title ng-binding">ID</span>
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text" style="text-align: left !important;">
+                                        <div class="table-header">
+                                            <span class="column-title">NAME</span>
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text"  style="text-align: left !important;">
+                                        <div class="table-header">
+                                            <span class="column-title">EMAIL</span>
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text"  style="text-align: left !important;">
+                                        <div class="table-header">
+                                            <span class="column-title">COUNTRY</span>
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text"  style="text-align: left !important;">
+                                        <div class="table-header">
+                                            <span class="column-title">IP ADDRESS</span>
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text"  style="text-align: left !important;">
+                                        <div class="table-header">
+                                            <span class="column-title">JOINED</span>
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text" style="text-align: left !important;">
+                                        <div class="table-header">
+                                            <span class="column-title">ROLE</span>
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text"  style="text-align: left !important;">
+                                        <div class="table-header">
+                                            <!--<span class="column-title"></span>-->
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr ng-repeat="row in vm.filteredTodos | filter:search">
+                                    <td style="text-align: left !important;">
+
+
+                                        <input type='checkbox' class="checkbox" value="{{row._id}}">
+                                        <input type="hidden" id="selectedids" />
+
+
+
+                                    </td>
+                                    <td class="sorting_1" style="text-align: left !important;">
+                                        <span class="bold" style="font-weight:bold;">
+                                            {{row._id}}
+                                        </span>
+                                    </td>
+                                    <td class="sorting_1"  style="text-align: left !important;">
+                                        <span class="red-fg">
+                                            {{row.firstname}} {{row.lastname}}
+                                        </span>
+                                    </td>
+
+                                    <td class="sorting_1"  style="text-align: left !important;">
+                                        <span class="{{row.mincompensation}}">
+                                            {{row.username}}
+                                        </span>
+
+                                    </td>
+                                    <td class="sorting_1"  style="text-align: left !important;">
+                                        <span class="{{row.availibility}}">
+                                            {{row.country}}
+                                        </span>
+                                    </td>
+                                    <td class="sorting_1"  style="text-align: left !important;">
+                                        <span class="">
+                                            {{row.ipAddress}}
+                                        </span>
+                                    </td>
+                                    <td class="sorting_1"  style="text-align: left !important;">
+                                        <span class="amber-700-fg">
+                                            {{row.createddate | date}}
+                                        </span>
+                                    </td>
+                                    <td class="sorting_1" style="text-align: left !important;">
+                                        <span class="">
+                                            {{row.roles.role}}
+                                        </span>
+                                    </td>
+                                    <td class="sorting_1"  style="text-align: center !important;">
+                                        <span class="">
+                                            <!--<i class="icon icon-pencil s20" ng-if="row.roles.role=='User'"></i>-->
+                                            <i class="icon icon-pencil s20" style="cursor:pointer;" ng-click="vm.EditUser(row._id)"></i>
+                                        </span>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </ms-widget-front>
+                    <!-- / Front -->
+                </ms-widget>
+                <!-- / WIDGET 7 -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- / CONTENT -->
+<script>
+
+
+    function checkall() {
+        
+        var select_all = document.getElementById("select_all"); //select all checkbox
+        var checkboxes = document.getElementsByClassName("checkbox"); //checkbox items
+        //select all checkboxes
+        select_all.addEventListener("change", function (e) {
+            for (i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = select_all.checked;
+            }
+        });
+        for (var i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].addEventListener('change', function (e) { //".checkbox" change
+                //uncheck "select all", if one of the listed checkbox item is unchecked
+                if (this.checked == false) {
+                    select_all.checked = false;
+
+                }
+                //check "select all" if all checkbox items are checked
+                if (document.querySelectorAll('.checkbox:checked').length == checkboxes.length) {
+                    select_all.checked = true;
+
+                }
+            });
+        }
+
+    }
+    function addids() {
+        
+        var selectedValues = "";
+        $('#tableservice').find('input[type="checkbox"]:checked').each(function () {
+            selectedValues += "," + $(this).val();
+        });
+        $('#selectedids').val(selectedValues);
+    }
+</script>
+
+

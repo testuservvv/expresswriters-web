@@ -1,0 +1,783 @@
+<style>
+    .active {
+        border-bottom: 1px solid #808080;
+    }
+
+    .md-checked {
+        color: #69b400;
+    }
+
+    .md-accent.md-raised.md-hue-1.md-button.md-default-theme.md-ink-ripple {
+        height: 42px;
+        margin-top: 6px;
+    }
+
+    .icon-lock-outline {
+        color: #69b400 !important;
+    }
+
+    .md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
+        background-color: #69b400 !important;
+    }
+
+    .md-switch.md-default-theme.md-checked .md-thumb, md-switch.md-checked .md-thumb {
+        background-color: #69b400 !important;
+    }
+
+    .md-radio-button.md-default-theme.md-checked .md-off, md-radio-button.md-checked .md-off {
+        background-color: #69b400 !important;
+    }
+
+    .md-radio-button.md-default-theme .md-on, md-radio-button .md-on {
+        background-color: #69b400 !important;
+    }
+
+    .md-checkbox.md-default-theme.md-checked.md-ink-ripple, md-checkbox.md-checked.md-ink-ripple {
+        color: #69b400 !important;
+    }
+
+    .md-primary.md-hue-1.md-button {
+        height: 44px;
+    }
+
+    .md-raised.md-accent.md-button.md-default-theme.md-ink-ripple {
+        height: 42px;
+    }
+
+    .icon.icon-lock-unlocked-outline.s40 {
+        margin-top: 8px;
+    }
+
+    .md-button {
+        margin: 6px 13px;
+    }
+
+    .answer_WI {
+        color: #69b400 !important;
+    }
+
+    .md-whiteframe_1 {
+        padding: 0px;
+        background-color: #FFF;
+        border: 1px solid #ccc;
+        box-shadow: none;
+    }
+
+        .md-whiteframe_1 .form-title {
+            background-color: #fff;
+            border-bottom: 0 solid #ccc;
+            color: #666666;
+            font-size: 20px;
+            padding: 10px 15px;
+        }
+
+    .whiteframe_1_1 {
+        background-color: rgba(0, 0, 0, 0.04);
+        padding: 13px 15px 14px;
+    }
+
+        .whiteframe_1_1 .md-icon-float.md-default-theme.flex {
+            margin: 0;
+            padding: 0;
+        }
+
+            .whiteframe_1_1 .md-icon-float.md-default-theme.flex .md-input {
+                border: none !important;
+            }
+
+    .right_secton {
+        float: right;
+        text-align: right;
+        width: auto;
+    }
+
+        .right_secton .md-primary.md-hue-1.md-button {
+            border-radius: 0;
+            height: auto;
+            margin: 0;
+            min-width: 49px;
+            padding: 0;
+        }
+
+            .right_secton .md-primary.md-hue-1.active.md-button, .right_secton .md-primary.md-hue-1.md-button:hover, .right_secton .md-primary.md-hue-1.md-button:focus {
+                border: 1px solid #69b400;
+                color: #69b400;
+            }
+
+        .right_secton .md-accent.md-raised.md-hue-1.md-button.md-default-theme.md-ink-ripple {
+            color: #fff;
+            height: 36px !important;
+        }
+
+    .whiteframe_1_1 .md-icon-float.md-default-theme.flex {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: 10px;
+    }
+
+    .whiteframe_1_2 {
+        display: inline-block;
+        padding: 15px 15px;
+        width: 100%;
+    }
+
+    .whiteframe_1_col1 select {
+        padding: 6px 3px;
+        width: 100%;
+    }
+
+    .whiteframe_1_col1 .input-field {
+        display: inline-block;
+        margin: 0 7px;
+    }
+
+    .whiteframe_1_right {
+        float: right;
+    }
+
+    .whiteframe_1_2 .whiteframe_1_col1 {
+        float: left;
+    }
+
+        .whiteframe_1_2 .whiteframe_1_col1 .icon {
+            border: 1px solid rgba(0, 0, 0, 0.29);
+            display: inline-block;
+            font-size: 20px !important;
+            height: auto !important;
+            line-height: normal !important;
+            margin-top: 0 !important;
+            max-height: inherit !important;
+            min-height: inherit !important;
+            padding: 6.3px 0 6px;
+            position: relative;
+            text-align: center;
+            top: 2px;
+            cursor: pointer;
+        }
+
+    .whiteframe_1_right button {
+        height: 36px !important;
+        margin: 2px 0 0 11px;
+    }
+
+    .whiteframe_1_col1 > span {
+        margin-right: 10px;
+    }
+
+    .whiteframe_1_3 {
+        background-color: #fcfcfc;
+        border: 1px solid #ccc;
+        float: left;
+        padding: 15px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+        .whiteframe_1_3 .input-field {
+            float: left;
+            min-width: 100%;
+            margin-top: 12px;
+        }
+
+            .whiteframe_1_3 .input-field select {
+                padding: 6px 3px;
+                width: 100%;
+            }
+
+        .whiteframe_1_3 .layout-align-start-stretch {
+            float: left;
+            width: auto;
+        }
+
+            .whiteframe_1_3 .layout-align-start-stretch .md-inline-form md-checkbox {
+                margin: 0 10px 0 0;
+            }
+
+        .whiteframe_1_3 md-checkbox .md-label {
+            color: black;
+            font-size: 16px;
+            margin-left: 35px;
+        }
+
+        .whiteframe_1_3 md-checkbox .md-icon {
+            width: 17px;
+            height: 17px;
+            top: 3px;
+            left: 8px;
+        }
+
+        .whiteframe_1_3 md-checkbox.md-checked .md-icon:after {
+            height: 10.333px;
+            width: 4.667px;
+            top: 1.222px;
+        }
+
+    .md-inline-form .whiteframe_1_3 md-checkbox {
+        margin: 5px 0 0;
+    }
+
+    .md-inline-form md-radio-group md-radio-button .md-label {
+        font-size: 11px;
+        margin-left: 14px;
+    }
+
+    .whiteframe_1_3 .right_col_ra {
+        /*float: left;*/
+        width: auto;
+    }
+
+        .whiteframe_1_3 .right_col_ra md-radio-button .md-container {
+            top: 15px;
+            left: 5px;
+        }
+
+        .whiteframe_1_3 .right_col_ra md-radio-button .md-off {
+            width: 12px;
+            height: 13px;
+        }
+
+        .whiteframe_1_3 .right_col_ra md-radio-button .md-on {
+            height: 9px;
+            width: 8px;
+            top: 2px;
+            left: 1.5px;
+            color: #69b400 !important;
+        }
+
+    .md-inline-form .whiteframe_1_3 md-radio-group md-radio-button {
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        display: inline-block;
+        height: 25px;
+        line-height: normal;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 0px 6px;
+    }
+
+        .md-inline-form .whiteframe_1_3 md-radio-group md-radio-button .md-label {
+            font-size: 11px;
+            margin-left: 20px;
+            margin-top: 0px;
+            vertical-align: top;
+        }
+
+            .md-inline-form .whiteframe_1_3 md-radio-group md-radio-button .md-label span {
+                border-left: 1px solid #ccc;
+                float: left;
+                padding: 5px 0 5px 5px;
+            }
+
+    .right_col_ra small {
+        font-size: 11px;
+        font-style: italic;
+        margin: 0 8px 0 0;
+    }
+
+    .md-inline-form .whiteframe_1_3 md-radio-group {
+        margin: 0;
+    }
+
+    .whiteframe_1_3 .right_col_ra {
+        float: right;
+        padding-top: 5px;
+        width: auto;
+    }
+
+    .whiteframe_1_3 .layout-align-start-stretch {
+        float: left;
+        margin-left: 19px;
+        width: auto;
+    }
+
+    .whiteframe_1_3 .input-field select {
+        font-size: 13px;
+    }
+
+    .mc_section {
+        float: left;
+        width: 100%;
+        padding: 15px 15px;
+    }
+
+    .mc_section1 .mc_right > span {
+        color: #666666;
+        float: left;
+        font-size: 12px;
+        margin-top: 3px;
+    }
+
+    .mc_section1 .mc_right {
+        position: absolute;
+        right: 0;
+        top: 18px;
+    }
+
+    .mc_right {
+        z-index: 999;
+    }
+
+    .mc_section1 {
+        padding-right: 120px;
+        position: relative;
+    }
+
+    .edit_button {
+        color: red;
+        float: left;
+        margin: 3px 7px;
+    }
+
+    .close_button i {
+        color: #e61610 !important;
+    }
+
+    .mc_section1 a:hover, .mc_section1 a:focus {
+        text-decoration: none;
+    }
+
+    .add-an-answer-col {
+        float: left;
+        width: 100%;
+    }
+
+        .add-an-answer-col .md-icon-float {
+            display: block;
+            float: left;
+            margin: 0;
+            max-width: 100%;
+            min-width: 100%;
+            width: 100%;
+        }
+
+    .add-an-answer-col {
+        display: block;
+        float: left;
+        width: 100%;
+    }
+
+    .add_an_ans {
+        clear: both;
+        display: block;
+        float: left;
+        margin: 0;
+        padding: 0;
+    }
+
+        .add_an_ans i.icon {
+            color: #69b400 !important;
+            float: left;
+            line-height: normal;
+        }
+
+        .add_an_ans span {
+            float: left;
+            font-size: 11px;
+            line-height: normal;
+            color: #69b400 !important;
+            margin: 7px 0 5px 9px;
+            text-transform: capitalize;
+        }
+
+    .md-radio-button.md-default-theme.md-checked .md-off, md-radio-button.md-checked .md-off {
+        border-color: #69b400 !important;
+    }
+
+    .md-checkbox.md-default-theme.md-checked .md-icon, md-checkbox.md-checked .md-icon {
+        border-color: #69b400 !important;
+    }
+
+    md-checkbox.md-default-theme.md-checked .md-icon, md-checkbox.md-checked .md-icon {
+        background-color: #69b400;
+    }
+
+    .md-inline-form md-radio-group.radio_col2 md-radio-button .md-label {
+        font-size: 16px;
+        line-height: normal;
+        margin-left: 28px;
+    }
+
+    .md-inline-form md-radio-group.radio_col2 md-radio-button {
+        float: left;
+        width: 100%;
+    }
+
+    .md-inline-form md-radio-group.radio_col2 {
+        float: left;
+        margin: 12px 5px 1px;
+    }
+
+    .mc_section1-lab label {
+        color: #000 !important;
+        font-size: 19px;
+    }
+
+    .choice_col1 {
+        margin: 0;
+        min-height: inherit !important;
+    }
+
+    .mc_section_rept {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .whiteframe_1_3 md-input-container {
+        padding: 0px;
+        margin: 0px 0;
+    }
+
+    .whiteframe_1_2 md-input-container {
+        padding: 0px;
+        margin: 0px 0;
+    }
+
+    body .whiteframe_1_3 .layout-align-start-stretch {
+        float: right !important;
+    }
+
+    body .whiteframe_1_3 .right_col_ra {
+        float: left !important;
+    }
+
+    .form-title.form-titlemain {
+        font-weight: 500 !important;
+    }
+
+    .whiteframe_1_1.whitebackground {
+        background-color: #fff;
+    }
+
+    .left-righsearch {
+        position: absolute;
+        right: 4%;
+    }
+
+    .searchinput {
+        border: 2px solid #ddd !important;
+        padding: 9px !important;
+    }
+
+    .createnew {
+        border-bottom: 1px solid #ccc !important;
+    }
+
+    .chips {
+        border: 1px solid #69B400;
+        color: #69B400;
+        border-radius: 0px;
+        padding: 5px;
+        font-size: 10px;
+        margin: 3px;
+        float: left;
+    }
+
+    .border-users {
+        background-color: #fff;
+        border: 1px solid #666666;
+        height: 100%;
+        margin-right: 0;
+        padding: 11px;
+        min-height: 48px;
+        width: 100%;
+    }
+
+    .md-checkbox .md-label {
+        color: black !important;
+    }
+
+    .textwriter {
+        font-size: 10px;
+        width: 11%;
+    }
+
+    .search {
+        position: relative;
+    }
+
+    .md-raised.md-accent.md-button.md-default-theme.md-ink-ripple {
+        background: #0078ce none repeat scroll 0 0;
+        color: #fff;
+        font-weight: 400;
+        height: 42px;
+        margin-top: -27px;
+    }
+
+    .icon.icon-magnify.s20 {
+        position: absolute;
+        right: 10px;
+        top: 11px;
+    }
+
+    .new-frame {
+        position: relative;
+        padding: 0px 12px;
+    }
+
+        .new-frame .left_col {
+            position: absolute;
+            right: 3%;
+        }
+
+        .new-frame .whiteframe_1_3 .input-field {
+            margin-top: 1px;
+        }
+
+        .new-frame .textwriter {
+            font-size: 13px;
+            width: 19%;
+            vertical-align: middle;
+            line-height: 73px;
+        }
+
+    .add-area {
+        margin-right: 13px;
+        margin-top: 0;
+        width: 205px;
+    }
+
+        .add-area .ng-isolate-scope.md-default-theme {
+            width: 50%;
+        }
+
+        .add-area .md-raised.md-accent.new-btn.md-button.md-default-theme.md-ink-ripple {
+            height: 27px;
+            margin-top: 0;
+            min-width: 45px !important;
+        }
+
+        .add-area md-autocomplete md-autocomplete-wrap {
+            width: 133px;
+        }
+
+        .add-area .md-raised.md-accent.new-btn.md-button.md-default-theme.md-ink-ripple {
+            float: right;
+            height: 41px;
+            margin-top: -40px;
+            min-width: 45px !important;
+            border: 0px;
+        }
+    .right-click{
+       
+  border: 1px solid;
+  color: #69b400!important;
+  margin-right: 5px;
+  cursor: pointer;
+  margin-left: -6px;
+  padding: 5px 5px 7px;
+
+    }
+    .search {
+  margin-top: 16px;
+ 
+}
+    .md-primary.vegetablechip.ng-scope {
+    padding-top: 4px;
+}
+</style>
+<div id="simple-table" class="page-layout simple fullwidth doc-page element-doc-page">
+    <!-- CONTENT -->
+    <div class="content">
+        <div class="row">
+            <div class="form-title form-titlemain">Categories & Tags</div>
+            <div class="form-wrapper md-whiteframe-1dp md-whiteframe_1" flex="100">
+                <form name="basicForm" class="md-inline-form" novalidate>
+                    <div>
+                       
+                        <div class="md-title mt-32"></div>
+
+                        <div class="md-title mt-32"></div>
+                        <div class="md-title mt-32"></div>
+                        <div class="md-title mt-32"></div>
+                        <div layout="column" layout-gt-xs="row" class="whiteframe_1_1 whitebackground">
+                            <div class="left-addnewstyle" ng-if="vm.manager=='false'">
+                                <md-input-container md-no-float flex>
+                                    <input type="text" name="newcategories" ng-model="vm.newcategories"
+                                           placeholder="New Categories"
+                                           required class="createnew">
+                                    <div ng-messages="basicForm.newcategories.$error"
+                                         role="alert">
+                                        <div ng-message="required">
+                                            <span>Title is required.</span>
+                                        </div>
+                                    </div>
+                                </md-input-container>
+                                <md-button type="submit" class="md-raised md-accent" aria-label="Submit"
+                                           ng-disabled="basicForm.newcategories.$invalid" ng-click="addnewcategories()">
+                                    ADD NEW
+                                </md-button>
+                               
+                            </div>
+                            <div class="left-righsearch">
+                                <div class="search">
+                                    <input type="text" name="search" ng-model="vm.search"
+                                           placeholder="Tag search..." class="searchinput" />
+                                    <i class="icon icon-magnify s20"></i>
+                                </div>
+                               
+                            </div>
+                            <div class="md-title mt-32" ng-if="vm.manager!='false'"></div>
+                            <div class="md-title mt-32" ng-if="vm.manager!='false'"></div>
+                        </div>
+                        <div class="md-title mt-32"></div>
+                        
+                        <!--Admin view-->
+                        <div layout="column" layout-gt-xs="row" class="whiteframe_1_1 whitebackground new-frame" ng-repeat="st in vm.styles | filter:vm.search" ng-if="vm.manager=='false'">
+                            <div class="whiteframe_1_3">
+                                <div class="row">
+                                    <div layout="column" layout-gt-xs="row" class="input-field col s12" flex="100">
+                                        <div class="right_col_ra">
+                                            <md-checkbox  type="checkbox" ng-model="st.status" ng-click="EnableDisable(st._id)" class="raodio-text">{{st.name}}</md-checkbox>
+                                            
+                                        </div>
+                                        <div class="left_col">
+                                            <div class="add-area">
+                                               
+                                            </div>
+                                           
+                                            <i class="icon icon-close-circle-outline s20" style="cursor: pointer; color: red; float: right; position: absolute; right: 0px; top: 9px;" ng-click="deletestyle(st._id)"></i>
+                                        </div>
+                                    </div>
+                                    <div layout="column" layout-gt-xs="row" class="input-field col s12" flex="100">
+                                        <span class="textwriter"> Active Tags:</span>
+
+                                        <p class="border-users">                                           
+                                            <md-chips ng-model="st.tags" md-autocomplete-snap
+                                                      md-transform-chip="addwr($chip.id,$chip.name,st._id,st.tags)" class="chipsDiv input_tag chipsDiv09" md-removable="true">
+                                                <md-autocomplete md-selected-item="selectedItem"
+                                                                 md-search-text="searchText"
+                                                                 md-items="user in querySearch(searchText)"
+                                                                 md-item-text="user.name"
+                                                                 placeholder="">
+                                                    <span md-highlight-text="searchText">{{user.name}}</span>
+                                                    <md-not-found>
+                                                          
+                                                            Create <a ng-click="vm.addnewtags(searchText,st._id)">{{searchText}}</a>
+                                                        </md-not-found>
+                                                </md-autocomplete>
+                                                <md-chip-template>
+                                                    <span>
+                                                        <strong ng-bind-html="$chip.name | highlight:vm.search"></strong>
+                                                    </span>
+                                                </md-chip-template>                                                
+                                                <button md-chip-remove class="md-primary vegetablechip">
+                                                    <i class="icon icon-check s10 right-click" ng-click="addtagtoactive($chip.id,st._id)" ng-if="$chip.status!='Active'"></i>
+                                                    <i class="icon icon-close s20" style="cursor:pointer;color:black;" ng-click="deletetag($chip.id,st._id)"></i>
+                                                </button>
+                                            </md-chips>
+                                        </p>
+                                    </div>
+                                    <!--<div layout="column" layout-gt-xs="row" class="input-field col s12" flex="100">
+                                        <span class="textwriter"> Suggested Tags:</span>
+
+                                        <p class="border-users">
+                                            
+                                            <md-chips ng-model="st.tagsinactive" md-autocomplete-snap
+                                                      md-transform-chip="transformChip($chip,st._id,st.name)" 
+                                                      readonly="true" class="chipsDiv input_tag input_tag_yes" md-removable="true">
+                                              
+                                             
+                                                <md-chip-template>
+                                                    <span>
+                                                        <strong>{{$chip.name}}</strong>
+                                                    </span>
+                                                </md-chip-template>
+                                                <button md-chip-remove class="">
+                                                    
+                                                    <i class="icon icon-check s10 right-click" ng-click="addtagtoactive($chip.id,st._id)"></i>
+                                                    <i class="icon icon-close s20" style="cursor:pointer;color:black;" ng-click="deletetag($chip.id,st._id)"></i>
+                                                </button>
+                                            </md-chips>
+                                        </p>
+                                    </div>-->
+
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <!--Admin view-->
+                        <!--Manager view-->
+                        <div layout="column" layout-gt-xs="row" class="whiteframe_1_1 whitebackground new-frame" ng-repeat="st in vm.styles | filter:vm.search" ng-if="vm.manager!='false' && st.status==true">
+                            <div class="whiteframe_1_3">
+                                <div class="row">
+                                    <div layout="column" layout-gt-xs="row" class="input-field col s12" flex="100">
+                                        <div class="right_col_ra">
+                                            
+                                            <label>{{st.name}}</label>
+                                        </div>
+                                       
+                                    </div>
+                                    <div layout="column" layout-gt-xs="row" class="input-field col s12" flex="100">
+                                        <span class="textwriter"> Active Tags:</span>
+
+                                        <p class="border-users">
+                                           
+                                            <md-chips ng-model="st.tagsactive" md-autocomplete-snap
+                                                      md-transform-chip="addwrss($chip.id,$chip.name,st._id,st.tags)" class="chipsDiv input_tag"
+                                                       readonly="true" md-removable="false">
+                                               
+                                                <md-chip-template>
+                                                    <span>
+                                                        <strong>{{$chip.name}}</strong>
+                                                    </span>
+                                                </md-chip-template>
+                                                
+                                            </md-chips>
+                                        </p>
+                                    </div>
+                                   
+
+                                    <div layout="column" layout-gt-xs="row" class="input-field col s12" flex="100">
+                                        <div class="left_col">
+                                            <div class="add-area">
+                                               
+                                            </div>
+                                          
+                                        </div>
+                                        <span class="textwriter"> Suggested Tags:</span>
+
+                                        <p class="border-users">
+                                           
+                                            <md-chips ng-model="st.tagsinactive" md-autocomplete-snap
+                                                      md-transform-chip="transformChips($chip,st._id,st.name)" class="chipsDiv input_tag" md-removable="true">
+                                                <md-autocomplete md-selected-item="selectedItem"
+                                                                 md-search-text="searchText"
+                                                                 md-items="user in querySearch(searchText)"
+                                                                 md-item-text="user.name"
+                                                                 placeholder="">
+                                                    <span md-highlight-text="searchText">{{user.name}}</span>
+                                                </md-autocomplete>
+                                                <md-chip-template>
+                                                    <span>
+                                                        <strong ng-bind-html="$chip.name | highlight:vm.search"></strong>
+                                                    </span>
+                                                </md-chip-template>
+                                                <button md-chip-remove class="md-primary vegetablechip">
+                                                    <md-icon md-svg-icon="md-close"></md-icon>
+                                                    <i class="icon icon-close s20" style="cursor:pointer;color:black;" ng-click="deletetag($chip.id,st._id)"></i>
+                                                </button>
+                                            </md-chips>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Manager view-->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- / CONTENT -->
+</div>
+<script>
+    function adduserwriter(ev) {
+        $(ev).hide();
+        $(ev).prev('div').children('span').show();
+
+    }
+    function removeuserwriter(ev) {
+        $(ev).parent('span').parent('div').next('i').show();
+        $(ev).parent().hide();
+    }
+</script>

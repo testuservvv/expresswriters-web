@@ -1,0 +1,123 @@
+<md-dialog aria-label="Edit Question">
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Edit Question</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="../../../assets/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+        
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content" ng-init="anslist">
+          <div layout="column" layout-gt-sm="row">
+              <div ng-show="MC">
+                  <div layout="column" layout-gt-sm="row">
+                      <md-input-container flex>
+                          <input type="text" name="question" ng-model="question"
+                                 placeholder="Question"
+                                 required>
+                          <div ng-messages="basicForm.question.$error"
+                               role="alert">
+                              <div ng-message="required">
+                                  <span>Question is required.</span>
+                              </div>
+                          </div>
+                      </md-input-container>
+                  </div>                 
+
+                  <md-radio-group ng-model="selectedanswer" ng-show="hdnradiolist">
+                      <!--<i class="icon icon-border-color s40" ng-click="converttotext()"></i>-->
+                      <div ng-repeat="ans in anslist">
+                          <md-radio-button ng-value="ans.name"
+                                           class="md-primary">
+                              {{ans.name}}
+                          </md-radio-button>
+                      </div>
+                  </md-radio-group>
+                  <div ng-show="hdneditMCanswer">
+                      <div ng-repeat="ans in anslist" >
+                      <md-input-container flex>
+                          <input type="text" name="option" ng-model="ans.name"
+                                 placeholder="Option"
+                                 required>
+                          
+                      </md-input-container>
+                      </div>
+                      <md-button ng-click="converttotext()" class="md-raised md-accent">
+                          Update Options
+                      </md-button>
+                  </div>
+                  
+              </div>
+              <div ng-show="TF">
+                  <div layout="column" layout-gt-sm="row">
+                      <md-input-container flex="50">
+                          <input type="text" name="question" ng-model="question"
+                                 placeholder="Question"
+                                 required>
+                          <div ng-messages="basicForm.question.$error"
+                               role="alert">
+                              <div ng-message="required">
+                                  <span>Question is required.</span>
+                              </div>
+                          </div>
+                      </md-input-container>
+                  </div>
+                  <md-list class="offline-switch" flex="20">
+                      <md-list-item>
+                          <p>{{offline}}</p>
+                          <md-switch class="md-secondary" ng-model="offline" aria-label="Toggle offline"
+                                     translate-attr-aria-label="FM.TOOGLE_OFFLINE"></md-switch>
+
+                      </md-list-item>
+                  </md-list>
+
+              </div>
+              <div ng-show="WI">
+                  <div layout="column" layout-gt-sm="row">
+                      <md-input-container flex>
+                          <input type="text" name="question" ng-model="question"
+                                 placeholder="Question"
+                                 required>
+                          <div ng-messages="basicForm.question.$error"
+                               role="alert">
+                              <div ng-message="required">
+                                  <span>Question is required.</span>
+                              </div>
+                          </div>
+                      </md-input-container>
+                  </div>
+                  <div layout="column" layout-gt-sm="row">
+                      <md-input-container flex>
+                          <input type="text" name="answer" ng-model="answer"
+                                 placeholder="Answer"
+                                 required>
+                          <div ng-messages="basicForm.answer.$error"
+                               role="alert">
+                              <div ng-message="required">
+                                  <span>Answer is required.</span>
+                              </div>
+                          </div>
+                      </md-input-container>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+     
+      <span flex></span>
+      <md-button ng-click="cancel()">
+       Cancel
+      </md-button>
+      <md-button ng-click="Update()">
+       Update
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>
